@@ -13,7 +13,7 @@ const BlogPostCard = ({ blog }) => {
                 <div style={style} className='flex w-full rounded-sm h-64 justify-center bg-cover'></div>
             </div>
             <div className='col-span-2'>
-                <h3 className="text-2xl font-bold text-blue-950">{blog.title}</h3>
+                <h3 className="text-2xl font-bold text-blue-950 font-serif-override">{blog.title}</h3>
                 <div className="mt-2 text-justify text-gray-600">
                     <ReactMarkdown>
                         {blog.description}

@@ -24,6 +24,8 @@ const SingleBlogPage = () => {
         position: 'relative'
     }
 
+    blog.imgUrl = '../' + blog.imgUrl
+
     return (
         <>
             <header style={style} className="pt-40 pb-32 text-white mb-4">

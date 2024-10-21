@@ -25,6 +25,14 @@
     @apply font-display;
 }
 
+.font-serif-override {
+    @apply font-serif !important;
+}
+
+.font-display-override{
+    @apply font-display !important;
+}
+
 .gr-radial {
     background-image: radial-gradient(circle, #9cc0d5, #a5cdd8, #b2d8da, #c4e3dd, #d7ede2);
 }
