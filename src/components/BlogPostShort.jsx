@@ -16,7 +16,7 @@ const BlogPostShort = ({ blog }) => {
                 <ReactMarkdown>
                     {blog.description}
                 </ReactMarkdown></div>
-            <Link to={`/blog/${blog.id}`} className="mt-4 inline-block text-indigo-500 hover:underline">Devamını Oku</Link>
+            <Link to={`/blogs/${blog.id}`} className="mt-4 inline-block text-indigo-500 hover:underline">Devamını Oku</Link>
         </div>
     )
 }

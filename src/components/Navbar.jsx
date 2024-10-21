@@ -8,7 +8,7 @@ const Navbar = () => {
                 <Link to='/' className="grow px-6 text-2xl "><h1>Psikolog <br className='md:hidden'/>Ayşe Şahin</h1></Link>
                 <div className="grid grid-col-1 space-y-2 md:block md:space-x-6">
                     <Link to="/about" className="hover:text-blue-950">Hakkımda</Link>
-                    <Link to="#" className="hover:text-blue-950">Blog</Link>
+                    <Link to="/blogs" className="hover:text-blue-950">Blog</Link>
                     <Link to="#" className="hover:text-blue-950">İletişim</Link>
                     <Link to="#" className="bg-blue-950 text-white px-4 py-2 rounded-lg hover:bg-blue-900">Randevu Al</Link>
                 </div>

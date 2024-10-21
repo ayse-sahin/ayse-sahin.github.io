@@ -4,13 +4,15 @@ import HomePage from './pages/HomePage'
 import MainLayout from './layouts/MainLayout'
 import AboutPage from './pages/AboutPage'
 import SingleBlogPage from './pages/SingleBlogPage'
+import BlogsPage from './pages/BlogsPage'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/' element={<MainLayout />}>
             <Route index element={<HomePage />}/>
             <Route path='/about' element={<AboutPage />}/>
-            <Route path='/blog/:id' element={<SingleBlogPage />}/>
+            <Route path='/blogs' element={<BlogsPage />}/>
+            <Route path='/blogs/:id' element={<SingleBlogPage />}/>
         </Route>
     )
 )
