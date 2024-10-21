@@ -3,7 +3,7 @@ import React from 'react'
 const TherapyApproach = () => {
     return (
         <section className="py-16 bg-gray-50">
-            <div className="container mx-auto max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="container mx-auto px-6 max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12">
                 <div>
                     <h3 className="text-2xl font-bold text-indigo-600">Qualifications</h3>
                     <ul className="mt-4 space-y-4">
