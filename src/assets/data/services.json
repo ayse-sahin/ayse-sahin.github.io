@@ -1,0 +1,18 @@
+{
+    "title": "Services",
+    "description": "Services offered by Ayse Sahin",
+    "items": [
+        {
+            "title": "Bilişsel Davranışçı Terapi",
+            "text": "Düşünce ve davranışlarınızı daha iyi anlamanıza ve olumsuz düşünce kalıplarını değiştirmenize yardımcı olan kanıta dayalı bir yaklaşımdır."
+        },
+        {
+            "title": "Şema Terapi",
+            "text": "Çocukluk döneminde gelişen derin duygusal şemaları fark ederek, bu şemaları sağlıklı düşünce ve davranışlarla dönüştürmeyi amaçlar."
+        },
+        {
+            "title": "Cinsel Terapi",
+            "text": "Vajinismus gibi cinsel işlev bozukluklarını ele alarak, kişilerin cinsel yaşamlarındaki zorlukları aşmalarına ve sağlıklı bir cinsel deneyime ulaşmalarına destek olur."
+        }
+    ]
+}

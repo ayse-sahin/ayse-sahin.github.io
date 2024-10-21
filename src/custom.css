@@ -1,0 +1,72 @@
+.hero-background {
+    background-image: url('https://picsum.photos/1600/900');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.theme-font {
+    @apply font-serif;
+}
+
+.theme-font h1 {
+    @apply font-display;
+}
+
+.theme-font h2 {
+    @apply font-display;
+}
+
+.theme-font h3 {
+    @apply font-display;
+}
+
+.theme-font h4 {
+    @apply font-display;
+}
+
+.gr-radial {
+    background-image: radial-gradient(circle, #9cc0d5, #a5cdd8, #b2d8da, #c4e3dd, #d7ede2);
+}
+
+.gr-linear {
+    background-image: linear-gradient(to right bottom, #014871, #2e718c, #629ba4, #9bc4bf, #d7ede2);
+}
+
+.gr-test {
+    background: linear-gradient(170deg, rgba(255,255,255,1) 0%, rgba(129,232,255,0.4234287464985994) 50%, rgba(255,255,255,1) 100%);
+    @apply bg-white;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+}
+
+.blog-content h2 {
+    @apply text-3xl;
+    @apply font-bold;
+    @apply text-blue-900;
+    @apply py-4;
+}
+
+.blog-content h3 {
+    @apply text-2xl;
+    @apply font-bold;
+    @apply text-blue-900;
+    @apply py-4;
+}
+
+.blog-content p {
+    @apply pb-8;
+    @apply text-lg;
+}
+
+.blog-content ul {
+    @apply pb-4;
+    @apply list-disc;
+}

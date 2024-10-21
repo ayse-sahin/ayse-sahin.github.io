@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: "PlayfairDisplay";
+  src:local("PlayfairDisplay-Medium"),
+  url('./assets/fonts/Playfair_Display/static/PlayfairDisplay-Medium.ttf') 
+}
+
+@font-face{
+  font-family: "Montserrat";
+  src:local("Montserrat-Medium"),
+  url('./assets/fonts/Montserrat/static/Montserrat-Medium.ttf') 
+}
+
+@font-face{
+  font-family: "TheSeasons";
+  src:local("TheSeasons"),
+  url('./assets/fonts/The_Seasons/The_Seasons.otf') 
+}
+
+@font-face{
+  font-family: "NotoSerifDisplay";
+  src:local("NotoSerifDisplay-Medium"),
+  url('./assets/fonts/Noto_Serif_Display/static/NotoSerifDisplay-Medium.ttf') 
+}
