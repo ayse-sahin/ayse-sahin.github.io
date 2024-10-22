@@ -3,6 +3,7 @@ import Hero from '../components/Hero'
 import Services from '../components/Services'
 import Summary from '../components/Summary'
 import BlogPostsShort from '../components/BlogPostsShort'
+import AboutCallToAction from '../components/AboutCallToAction'
 
 const HomePage = () => {
     return (
@@ -11,6 +12,7 @@ const HomePage = () => {
             <Summary />
             <Services />
             <BlogPostsShort />
+            <AboutCallToAction />
         </>
     )
 }

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 const Summary = () => {
   return (
-        <section className="py-16 bg-white">
+        <section className="py-28 bg-white">
             <div className="container mx-auto px-6 grid place-items-center grid-cols-1 lg:grid-cols-3 gap-y-10 lg:gap-x-10 items-center">
                 <img src={aboutImg} alt="Profile Image" className="w-1/2 lg:w-full rounded-full shadow-md"/>
                 <div className='text-justify col-span-2'>

@@ -34,7 +34,8 @@
 }
 
 .gr-radial {
-    background-image: radial-gradient(circle, #9cc0d5, #a5cdd8, #b2d8da, #c4e3dd, #d7ede2);
+    background: rgb(17,45,96);
+    background: radial-gradient(circle, rgba(17,45,96,1) 0%, rgba(182,192,197,1) 100%);
 }
 
 .gr-linear {

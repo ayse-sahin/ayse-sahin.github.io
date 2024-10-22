@@ -3,12 +3,24 @@
     "description": "Services offered by Ayse Sahin",
     "items": [
         {
-            "title": "Bilişsel Davranışçı Terapi",
-            "text": "Düşünce ve davranışlarınızı daha iyi anlamanıza ve olumsuz düşünce kalıplarını değiştirmenize yardımcı olan kanıta dayalı bir yaklaşımdır."
+            "title": "İlişki Problemleri",
+            "text": "İlişkilerde yaşanan çatışmalar, iletişim sorunları veya ayrılık sonrası duygusal zorluklar, danışanlarımı terapiye yönlendiren konular arasında. İlişkilerini geliştirmek veya zorlayıcı ilişkileri daha iyi anlamak isteyen kişiler bana başvuruyor."
         },
         {
-            "title": "Şema Terapi",
-            "text": "Çocukluk döneminde gelişen derin duygusal şemaları fark ederek, bu şemaları sağlıklı düşünce ve davranışlarla dönüştürmeyi amaçlar."
+            "title": "Travma ve Duygusal İyileşme",
+            "text": "Geçmişte yaşanan travmatik olaylar ve şiddet, hayat boyu süren etkiler bırakabiliyor. Danışanlarım, bu zorlayıcı deneyimlerin üstesinden gelmek ve duygusal olarak iyileşmek için destek arıyorlar."
+        },
+        {
+            "title": "Cinsel Sağlık ve Duygusal Yakınlık Sorunları",
+            "text": "Cinsel sağlıkla ilgili konular, toplumda konuşulması zor olduğundan, birçok kişi bu konuda yardıma ihtiyaç duyuyor. Cinsel terapide danışanlarım, cinsel yaşamlarındaki sorunları anlamlandırmak ve daha sağlıklı bir şekilde çözüm bulmak için destek arıyorlar."
+        },
+        {
+            "title": "Hayat Geçişleri ve Kişisel Gelişim",
+            "text": "Yeni bir işe başlamak, başka bir şehre taşınmak, aile kurmak gibi hayatın büyük değişimleri sırasında belirsizlikle karşılaşan danışanlarım, bu süreçlerde rehberlik ve destek arıyorlar."
+        },
+        {
+            "title": "Kaygı ve Stres",
+            "text": "Pek çok insan, yoğun stresle başa çıkmakta zorlanıyor ya da sürekli bir kaygı hissiyle yaşıyor. İş, okul, aile veya özel hayatın baskılarıyla baş ederken, bu durumlarla daha sağlıklı yollarla başa çıkmak isteyen danışanlarım oluyor."
         },
         {
             "title": "Cinsel Terapi",

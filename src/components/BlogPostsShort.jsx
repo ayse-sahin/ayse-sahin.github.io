@@ -23,7 +23,7 @@ const BlogPostsShort = () => {
                         return <BlogPostShort key={index} blog={blog}/>
                     }) }
                 </div>
-                <Link onClick={() => { window.scroll(0, 0); }} to="/blogs" className="mt-6 inline-block bg-blue-950 text-white px-8 py-2 rounded-lg shadow-lg hover:bg-blue-900">Hepsini Gör</Link>
+                <Link onClick={() => { window.scroll(0, 0); }} to="/blogs" className="mt-16 inline-block bg-blue-950 text-white px-8 py-2 rounded-lg shadow-lg hover:bg-blue-900">Hepsini Gör</Link>
             </div>
         </section>
     )

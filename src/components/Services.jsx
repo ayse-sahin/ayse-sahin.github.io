@@ -1,8 +1,16 @@
+import grBackground from '../assets/images/gr-background.png'
 import React, { useEffect, useState } from 'react'
 import ServiceCard from './ServiceCard'
 
 const Services = () => {
     const [services, setServices] = useState(null)
+
+    const style = {
+        backgroundImage: 'url("src/assets/images/gr-background.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        position: 'relative'
+    } 
 
     useEffect(() => {
         fetch('src/assets/data/services.json')
@@ -12,11 +20,10 @@ const Services = () => {
     }, [])
 
     return (
-        <section className="gr-radial py-16 bg-gray-100">
-            <div className="container mx-auto px-6 text-center">
-                <h2 className="text-3xl font-bold text-blue-950">Hizmetler</h2>
-                <p className="mt-4 text-lg text-gray-600">Yetişkinlere Yönelik Terapi Hizmetleri</p>
-                <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section style={style} className="text-blue-950 pt-24 pb-10 bg-gray-100">
+            <div className="container mx-auto px-6 text-center relative z-10">
+                <h2 className="text-3xl">Danışanlarım bana hangi sebeplerle gelir?</h2>
+                <div className="pt-8 mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
                     { services && services.items.map((service, index) => {
                         return <ServiceCard key={index} title={service.title} text={service.text}/>
                     }) }
