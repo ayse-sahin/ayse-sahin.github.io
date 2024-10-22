@@ -1,20 +1,33 @@
 import React, { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { useParams } from 'react-router-dom'
+import Spinner from '../components/Spinner'
+import NotFound from './NotFound'
 
 const SingleBlogPage = () => {
+    const [loading, setLoading] = useState(true)
     const [blog, setBlog] = useState(null)
     const { id } = useParams()
 
     useEffect(() => {
         fetch('../src/assets/data/blogs.json')
-        .then(response => response.json())
-        .then(data => setBlog(data.items.find((blog) => blog.id === id )))
-        .catch(error => console.error('Error fetching data:', error))
+            .then(response => response.json())
+            .then((data) => {
+                setBlog(data.items.find((blog) => blog.id === id ));
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error('Error fetching data:', error)
+                setLoading(false)
+            })
     }, [])
 
-    if (!blog) {
-        return <h1 className='text-7xl text-center py-64'>404 Not Found</h1>
+    if (loading) {
+        return <Spinner loading={loading}/>
+    }
+
+    if (!loading && !blog) {
+        return <NotFound />
     }
 
     const style = {

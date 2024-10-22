@@ -5,6 +5,7 @@ import MainLayout from './layouts/MainLayout'
 import AboutPage from './pages/AboutPage'
 import SingleBlogPage from './pages/SingleBlogPage'
 import BlogsPage from './pages/BlogsPage'
+import NotFound from './pages/NotFound'
 
 const router = createBrowserRouter(
     createRoutesFromElements(
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
             <Route path='/about' element={<AboutPage />}/>
             <Route path='/blogs' element={<BlogsPage />}/>
             <Route path='/blogs/:id' element={<SingleBlogPage />}/>
+            <Route path='*' element={<NotFound />}/>
         </Route>
     )
 )
