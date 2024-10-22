@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown'
 import { useParams } from 'react-router-dom'
 import Spinner from '../components/Spinner'
 import NotFound from './NotFound'
+import BlogCallToAction from '../components/BlogCallToAction'
 
 const SingleBlogPage = () => {
     const [loading, setLoading] = useState(true)
@@ -53,6 +54,7 @@ const SingleBlogPage = () => {
                     <article className="blog-content prose lg:prose-xl mx-auto text-gray-700"><ReactMarkdown>{blog.content}</ReactMarkdown></article>
                 </div>
             </main>
+            <BlogCallToAction />
         </>
     )
 }
