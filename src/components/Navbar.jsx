@@ -9,8 +9,8 @@ const Navbar = () => {
                 <div className="grid grid-col-1 space-y-2 md:block md:space-x-6">
                     <Link to="/about" className="hover:text-blue-950">Hakkımda</Link>
                     <Link to="/blogs" className="hover:text-blue-950">Blog</Link>
-                    <Link to="#" className="hover:text-blue-950">İletişim</Link>
-                    <Link to="#" className="bg-blue-950 text-white px-4 py-2 rounded-lg hover:bg-blue-900">Randevu Al</Link>
+                    <Link to="/contact" className="hover:text-blue-950">İletişim</Link>
+                    <Link to="/contact" className="bg-blue-950 text-white px-4 py-2 rounded-lg hover:bg-blue-900">Randevu Al</Link>
                 </div>
             </div>
         </nav>
