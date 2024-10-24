@@ -1,48 +1,49 @@
 .accordion {
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 2px;
+    @apply border-2;
+    @apply border-blue-950;
+    @apply text-blue-950;
+    @apply rounded-xl;
 }
 
 .accordion__item + .accordion__item {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    @apply border-t;
+    @apply border-blue-950;
 }
 
 .accordion__button {
-    background-color: #f4f4f4;
-    color: #444;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    text-align: left;
-    border: none;
+    @apply cursor-pointer;
+    @apply p-5;
+    @apply w-full;
+    @apply text-left;
 }
 
 .accordion__button:hover {
-    background-color: #ddd;
+    @apply text-blue-500;
 }
 
 .accordion__button:before {
-    display: inline-block;
-    content: '';
-    height: 10px;
-    width: 10px;
-    margin-right: 12px;
-    border-bottom: 2px solid currentColor;
-    border-right: 2px solid currentColor;
-    transform: rotate(-45deg);
+    @apply inline-block;
+    @apply content-[''];
+    @apply h-2.5;
+    @apply w-2.5;
+    @apply mr-3;
+    @apply border-b-2;
+    @apply border-r-2;
+    @apply border-current;
+    @apply -rotate-45;
 }
 
 .accordion__button[aria-expanded='true']::before,
 .accordion__button[aria-selected='true']::before {
-    transform: rotate(45deg);
+    @apply rotate-45;
 }
 
 [hidden] {
-    display: none;
+    @apply hidden;
 }
 
 .accordion__panel {
-    padding: 20px;
+    @apply p-6;
     animation: fadein 0.35s ease-in;
 }
 
