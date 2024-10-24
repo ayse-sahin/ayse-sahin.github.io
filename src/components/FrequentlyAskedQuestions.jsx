@@ -5,33 +5,18 @@ import {
     AccordionItemHeading,
     AccordionItemPanel,
 } from 'react-accessible-accordion';
-import '../../src/accordion.css'
+import '../accordion.css'
+import faq from '../assets/data/faq.json'
+import ReactMarkdown from 'react-markdown'
 
 
 import React from 'react'
 
 const FrequentlyAskedQuestions = () => {
-    const items = [
-        {
-            "uuid": "f5ff8d5a-c696-4208-aac4-34d233849eb3",
-            "heading": "Test 1",
-            "content": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
-        },
-        {
-            "uuid": "e2f07039-4012-4c3e-aa96-4d1b4af1fbef",
-            "heading": "Test 2",
-            "content": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
-        },
-        {
-            "uuid": "619f8369-097d-4b7e-8722-2a8a031f892d",
-            "heading": "Test 3",
-            "content": "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat."
-        }
-    ]
     return (
-        <div className='container mx-auto'>
+        <div className='container mx-auto py-10 px-6 md:px-20'>
             <Accordion allowZeroExpanded>
-                {items.map((item) => (
+                {faq.items.map((item) => (
                     <AccordionItem key={item.uuid}>
                         <AccordionItemHeading>
                             <AccordionItemButton>
@@ -39,7 +24,9 @@ const FrequentlyAskedQuestions = () => {
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
+                            <ReactMarkdown>
                             {item.content}
+                            </ReactMarkdown>
                         </AccordionItemPanel>
                     </AccordionItem>
                 ))}

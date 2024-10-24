@@ -1,0 +1,51 @@
+{
+    "title": "Frequently Asked Questions",
+    "description": "Json data for all the frequently asked questions and their answers.",
+    "items": [
+        {
+            "uuid": "f5ff8d5a-c696-4208-aac4-34d233849eb3",
+            "heading": "Psikoterapi nedir ve nasıl çalışır?",
+            "content": "Psikoterapi, duygusal ve zihinsel sağlığınızı iyileştirmek amacıyla yapılan, bir profesyonel terapist eşliğinde yürütülen bir süreçtir. Bu süreçte, danışan ve terapist güvenli, gizli bir ortamda birlikte çalışarak kişinin düşünce ve duygu dünyasını derinlemesine keşfeder. Psikoterapi, bireyin kendini daha iyi anlamasını, zorluklarla başa çıkma becerilerini geliştirmesini ve hayatında olumlu değişiklikler yapmasını hedefler.\n\nPsikoterapide kullanılan yaklaşımlar kişiden kişiye farklılık gösterir. Örneğin, *Bilişsel Davranışçı Terapi (BDT), bireyin olumsuz düşünce ve davranış kalıplarını değiştirmeye odaklanırken, **Şema Terapi* geçmiş deneyimlerin bugünkü düşünce ve davranışlarını nasıl şekillendirdiğine odaklanır. *Çözüm Odaklı Terapi* ise problemlerden ziyade çözümlere ve geleceğe yönelik hedeflere yoğunlaşır. Terapist, danışanın ihtiyaçlarına uygun bir yöntemle kişisel ve duygusal hedefler doğrultusunda ilerlemesine rehberlik eder."
+        },
+        {
+            "uuid": "e2f07039-4012-4c3e-aa96-4d1b4af1fbef",
+            "heading": "Psikoterapi kimler için uygundur?",
+            "content": "Psikoterapi, hayatında zorlayıcı dönemlerden geçen, anksiyete, depresyon, stres, travma, ilişki sorunları ya da kişisel gelişim ihtiyacı olan herkese uygundur. Bireylerin duygu ve düşünceleriyle başa çıkmalarına ve yaşam kalitelerini artırmalarına yardımcı olur."
+        },
+        {
+            "uuid": "55756162-b364-448e-baad-28670cd9a866",
+            "heading": "Psikoterapi ne kadar sürer?",
+            "content": "Terapi süresi danışanın ihtiyaçlarına ve hedeflerine bağlı olarak değişir. Kısa vadeli çözüm odaklı terapiler birkaç seans sürebilirken, uzun vadeli terapi daha derin bir çalışma gerektirebilir ve birkaç ay veya yıl devam edebilir. Süreç, terapist ve danışan tarafından birlikte planlanır."
+        },
+        {
+            "uuid": "cd352106-eaf2-4b73-bccb-47c094ecd387",
+            "heading": "İlk terapi seansında neler konuşulur?",
+            "content": " İlk terapi seansı yani ön görüşmede genellikle *tanışma* ve *değerlendirme* niteliğindedir. Bu seansta, danışanın terapiye gelme nedenleri, yaşadığı sorunlar, geçmiş deneyimleri ve genel yaşamı hakkında konuşulur. İlk görüşmenin temel amacı, hem danışanı daha iyi tanımak hem de danışanın terapi sürecinden beklentilerini ve hedeflerini anlamaktır.\n\nBu aşamada terapist, danışanın duygusal durumu, ilişkileri, iş hayatı, sosyal çevresi ve geçmişte yaşadığı önemli olaylar hakkında sorular sorabilir. Ayrıca, terapinin nasıl işleyeceği, seansların ne kadar süreceği ve hangi yaklaşımların kullanılabileceği hakkında da bilgi verilir. İlk seans aynı zamanda, terapist ve danışanın birbirlerine uyum sağlayıp sağlamayacaklarını anlamaları için bir fırsattır. Eğer danışan, terapist ile rahat hissetmezse ya da başka bir uzmanla daha iyi çalışabileceğini düşünürse, bu durumu açıkça ifade edebilir."
+        },
+        {
+            "uuid": "24c6d88d-9c5f-477c-ab78-e92748f085bf",
+            "heading": "Psikoterapiye başlamadan önce nasıl hazırlanmalıyım?",
+            "content": "Psikoterapiye başlamadan önce özel bir hazırlık yapmanıza gerek yoktur, ancak bazı noktalarda kendinizi daha rahat hissedebilmek için dikkate alabileceğiniz birkaç öneri var:\n\n-   **Açık Fikirli Olun:** Terapi sürecinde bazı sorulara veya konulara açık ve dürüst yanıtlar vermek zor olabilir. Ancak terapi, kendinizi tam anlamıyla ifade etme ve anlama sürecidir, bu yüzden açık fikirli olmak ve duygularınızı keşfetmeye istekli olmak önemlidir.\n\n-   **Beklentilerinizi Belirleyin:** Terapiden ne beklediğinizi ve neyi başarmak istediğinizi düşünün. Örneğin, anksiyeteyi yönetmek, ilişkileri iyileştirmek veya geçmiş travmaları işlemek gibi hedefler belirlemek, terapistinizle iş birliği içinde daha net bir yol haritası çizebilmenize yardımcı olur.\n\n-   **Sorular Hazırlayın:** Eğer terapi süreci hakkında sorularınız veya çekinceleriniz varsa, bunları ilk seansta dile getirmekten çekinmeyin. Örneğin, seansların sıklığı, süresi, terapi yöntemi gibi konular hakkında merak ettiklerinizi sormak, size süreçle ilgili daha fazla güven verebilir.\n\n-   **Rahat Olun:** Terapistiniz size güvenli ve yargısız bir alan sağlayacaktır. Düşünce ve duygularınızı ifade ederken tam anlamıyla rahat olabilirsiniz. İlk seanslar biraz tanışma süreci gibi geçecektir, bu yüzden acele etmeyin ve süreçten keyif almaya çalışın.\n\nUnutmayın ki terapi, kişisel gelişim yolculuğunuzun bir parçasıdır ve her adımda size destek olmak için burada bulunuyorum.\n"
+        },
+        {
+            "uuid": "31433271-48d4-448d-bf8c-762088119843",
+            "heading": "Online terapi yüz yüze terapiden farklı mı?",
+            "content": "Online terapi, son yıllarda giderek daha fazla tercih edilen bir terapi şeklidir ve yüz yüze terapiden temel olarak çok farklı değildir. Terapi sürecindeki yöntemler, kullanılan teknikler ve terapist ile danışan arasındaki ilişki, online terapide de aynıdır. Ancak, seanslar internet üzerinden, video görüşmesi, telefon veya yazılı mesajlaşma gibi dijital platformlar aracılığıyla gerçekleştirilir. Bu, birçok danışan için önemli avantajlar sağlar.\n\nOnline terapiyi tercih eden danışanlar için başlıca avantajlar şunlardır:\n\n-   **Zaman ve Mekân Esnekliği:** Online terapi, danışanların diledikleri yerden, örneğin evlerinden veya iş yerlerinden katılmalarına olanak tanır. Özellikle yoğun bir iş programına sahip olanlar ya da terapiye ulaşım sorunu yaşayanlar için büyük bir kolaylıktır. Ulaşım süresi ve masrafı olmadan terapiye katılmak mümkündür.\n\n-   **Daha Geniş Terapiye Erişim:** Online terapi, farklı şehirlerde hatta ülkelerde yaşayan kişilerin kendi dillerinde veya kültürel bağlamlarına uygun terapistlere erişebilmesini sağlar. Örneğin, yurtdışında yaşayan Türk vatandaşları, Türkçe konuşan bir terapistle online olarak görüşme fırsatı bulabilirler.\n\n-   **Rahat Ortam:** Bazı danışanlar için kendi evlerinde terapi almak daha rahatlatıcı olabilir. Ev konforu, özellikle anksiyete, sosyal fobi veya agorafobi gibi rahatsızlıkları olan kişiler için terapinin daha etkili olmasını sağlayabilir. Ayrıca, tanıdık bir ortamda olmak, terapinin daha rahat ve güvenli bir şekilde yapılmasına yardımcı olabilir.\n\n-   **Seyahat Zorlukları Ortadan Kalkar:** İş seyahati, taşınma, uzun süreli tatil gibi durumlarda dahi terapiye ara vermek zorunda kalmazsınız. İnternet bağlantınız olduğu sürece terapistinizle düzenli olarak seans yapmaya devam edebilirsiniz.\n\n-   **Mahremiyet:** Özellikle küçük yerleşim yerlerinde yaşayan kişiler için online terapi, daha fazla mahremiyet sağlar. Yüz yüze terapide karşılaşılabilecek \"tanıdık biri tarafından görülme\" endişesi, online terapide ortadan kalkar.\n\nSonuç olarak, online terapi esneklik, kolaylık ve erişim açısından büyük avantajlar sunarken, yüz yüze terapi ile temel olarak aynı işlevi görür. Hangi yöntemin sizin için daha uygun olduğuna karar vermek için ihtiyaçlarınıza ve tercihlerinize göre terapistinizle görüşebilirsiniz."
+        },
+        {
+            "uuid": "60c50dde-a740-469a-b526-c5b2cdcf3993",
+            "heading": "Terapiden nasıl bir fayda sağlayabilirim?",
+            "content": "Psikoterapi, sorunlarınıza daha farklı bir açıdan bakmanıza, stres ve kaygıyla başa çıkma becerilerinizi geliştirmenize, ilişkilerinizi iyileştirmenize ve kendinizi daha iyi anlamanıza yardımcı olabilir. Her birey farklı bir süreçten geçer, ancak genel olarak yaşam kalitesini artırmayı hedefler."
+        },
+        {
+            "uuid": "c336dad4-b7cf-4e14-b50d-9eb4a65e9fa6",
+            "heading": "Terapiste ne sıklıkla gitmeliyim?",
+            "content": "Seans sıklığı, danışanın ihtiyaçlarına ve terapistin önerilerine bağlı olarak değişir. Genellikle haftada bir seans önerilir, ancak bazı durumlarda daha sık ya da seyrek seanslarla da ilerlenebilir."
+        },
+        {
+            "uuid": "f3607575-c879-4c7c-ade2-2298a5d977c9",
+            "heading": "Terapi sırasında gizlilik nasıl sağlanır?",
+            "content": "Psikoterapide gizlilik, hem etik hem de yasal bir zorunluluktur ve terapistlerin mesleki etiğinin temel taşlarından biridir. Danışanın paylaştığı her şey, terapistin sorumluluğunda gizli tutulur. Bu sayede, danışanlar kendilerini rahatça ifade edebilir ve içtenlikle konuşabilirler. \n\nAncak bazı durumlarda, terapistin gizlilik ilkesini ihlal etmesi yasal bir zorunluluk haline gelebilir. Bunlar arasında:\n\n-   Danışanın kendine ya da başkasına zarar verme riski taşıdığı durumlar,\n-   Çocuk istismarı, ihmal ya da aile içi şiddet gibi durumlar,\n-   Mahkemelerce istenen yasal gereklilikler bulunur.\n\nBu istisnai durumlar haricinde, tüm bilgiler kesinlikle gizli tutulur. Online terapi de dahil olmak üzere tüm süreçlerde gizlilik aynı şekilde korunur. Bu nedenle, danışanlar gönül rahatlığıyla terapiye katılabilir ve terapistlerine güvenebilirler."
+        }
+    ]
+}

@@ -1,6 +1,4 @@
 .accordion {
-    @apply border-2;
-    @apply border-blue-950;
     @apply text-blue-950;
     @apply rounded-xl;
 }
@@ -12,9 +10,12 @@
 
 .accordion__button {
     @apply cursor-pointer;
-    @apply p-5;
+    @apply px-14;
+    @apply py-8;
     @apply w-full;
     @apply text-left;
+    @apply text-xl;
+    @apply font-bold;
 }
 
 .accordion__button:hover {
@@ -43,8 +44,32 @@
 }
 
 .accordion__panel {
-    @apply p-6;
     animation: fadein 0.35s ease-in;
+    @apply mb-8;
+}
+
+.accordion__panel p{
+    @apply px-14;
+    @apply pb-4;
+    @apply indent-8;
+    @apply text-justify;
+}
+
+.accordion__panel ul{
+    @apply indent-0;
+    @apply pl-20;
+    @apply pb-10;
+    @apply list-disc;
+}
+
+.accordion__panel ul li{
+    @apply indent-0;
+    @apply list-disc;
+}
+
+.accordion__panel ul li p{
+    @apply indent-0;
+    @apply p-0;
 }
 
 /* -------------------------------------------------- */
