@@ -6,8 +6,8 @@ const ContactInfo = () => {
             <h2 className="text-3xl font-bold text-blue-950">İletişim Bilgilerim</h2>
             <p className="mt-10 text-lg text-gray-700">
                 Randevu almak için mail yoluyla iletişime geçebilir ya da 
-                <p className='inline md:hidden'> aşağıdaki </p>
-                <p className='hidden md:inline'> sağdaki </p>
+                <span className='inline md:hidden'> aşağıdaki </span>
+                <span className='hidden md:inline'> sağdaki </span>
                 panelden randevu oluşturabilirsiniz.
             </p>
             <p className="mt-8 text-lg text-gray-700">

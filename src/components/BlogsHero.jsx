@@ -1,14 +1,14 @@
 import React from 'react'
 
-const ContactHero = () => {
+const BlogsHero = () => {
     return (
-        <section className="hero-background pb-20 py-20 relative text-white">
+        <section className="hero-background pt-32 pb-20 relative text-white">
             <div className="hero-overlay"></div>
             <div className="container relative z-10 px-8 mx-auto text-center">
-                <h1 className="text-4xl"></h1>
+                <h2 className="text-4xl font-bold">Blog Yazılarım</h2>
             </div>
         </section>
     )
 }
 
-export default ContactHero
+export default BlogsHero
