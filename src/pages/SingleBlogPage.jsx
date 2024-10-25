@@ -47,7 +47,7 @@ const SingleBlogPage = () => {
                 <div className='hero-overlay'></div>
                 <div className="w-full container mx-8 relative z-10 text-center text-white">
                     <h1 className="text-4xl font-bold"><ReactMarkdown>{blog.title}</ReactMarkdown></h1>
-                    <p className="mt-4 font-bold text-lg">Published on {blog.date} by {blog.author}</p>
+                    <p className="mt-4 font-bold text-lg">{blog.date}</p>
                 </div>
             </header>
             <main className="py-8 bg-white">
@@ -56,7 +56,7 @@ const SingleBlogPage = () => {
                 </div>
             </main>
             <BlogCallToAction />
-            <BlogPostsShort title="Okumaya Devam Et"/>
+            <BlogPostsShort title="Daha Fazla" urlPrefix='../'/>
         </>
     )
 }

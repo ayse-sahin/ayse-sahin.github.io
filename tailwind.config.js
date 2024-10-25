@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
             fontFamily: {
-                display: ['NotoSerifDisplay'],
+                display: ['CormorantGaramond'],
                 serif: ['Montserrat']
             }
         },

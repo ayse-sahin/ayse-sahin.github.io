@@ -25,3 +25,9 @@
   src:local("NotoSerifDisplay-Medium"),
   url('./assets/fonts/Noto_Serif_Display/static/NotoSerifDisplay-Medium.ttf') 
 }
+
+@font-face{
+  font-family: "CormorantGaramond";
+  src:local("CormorantGaramond-Regular"),
+  url('./assets/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf') 
+}

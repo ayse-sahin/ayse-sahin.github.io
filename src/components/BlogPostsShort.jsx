@@ -16,7 +16,7 @@ const BlogPostsShort = ({ title, subtitle = '', urlPrefix = ''}) => {
     return (
         <section className="py-16 bg-gray-100">
             <div className="container mx-auto px-6 text-center">
-                <h2 className="text-3xl font-bold text-blue-950">{title}</h2>
+                <h2 className="text-4xl font-bold text-blue-950">{title}</h2>
                 <p className="mt-4 text-gray-600">{subtitle}</p>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
                     { posts && posts.items.map((blog, index) => {
