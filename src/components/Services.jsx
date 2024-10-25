@@ -1,4 +1,3 @@
-import grBackground from '../assets/images/gr-background.png'
 import React, { useEffect, useState } from 'react'
 import ServiceCard from './ServiceCard'
 
@@ -13,7 +12,7 @@ const Services = () => {
     } 
 
     useEffect(() => {
-        fetch('src/assets/data/services.json')
+        fetch('/services.json')
         .then(response => response.json())
         .then(data => setServices(data))
         .catch(error => console.error('Error fetching data:', error))

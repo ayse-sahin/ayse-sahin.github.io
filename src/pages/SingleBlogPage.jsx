@@ -12,7 +12,7 @@ const SingleBlogPage = () => {
     const { id } = useParams()
 
     useEffect(() => {
-        fetch('../src/assets/data/blogs.json')
+        fetch('../blogs.json')
             .then(response => response.json())
             .then((data) => {
                 setBlog(data.items.find((blog) => blog.id === id ));
@@ -56,7 +56,7 @@ const SingleBlogPage = () => {
                 </div>
             </main>
             <BlogCallToAction />
-            <BlogPostsShort title="Okumaya Devam Et" urlPrefix='../'/>
+            <BlogPostsShort title="Okumaya Devam Et"/>
         </>
     )
 }

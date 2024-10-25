@@ -7,7 +7,7 @@ const BlogPostsShort = ({ title, subtitle = '', urlPrefix = ''}) => {
     const [posts, setPosts] = useState(null)
 
     useEffect(() => {
-        fetch(urlPrefix + 'src/assets/data/blogs.json')
+        fetch(urlPrefix + '/blogs.json')
         .then(response => response.json())
         .then(data => setPosts(data))
         .catch(error => console.error('Error fetching data:', error))

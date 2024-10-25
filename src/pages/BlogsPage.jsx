@@ -6,7 +6,7 @@ const BlogsPage = () => {
     const [posts, setPosts] = useState(null)
 
     useEffect(() => {
-        fetch('src/assets/data/blogs.json')
+        fetch('/blogs.json')
         .then(response => response.json())
         .then(data => setPosts(data))
         .catch(error => console.error('Error fetching data:', error))
