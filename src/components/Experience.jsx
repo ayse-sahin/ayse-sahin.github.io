@@ -4,16 +4,47 @@ const Experience = () => {
     return (
         <section className="py-16 bg-white">
             <div className="container mx-auto px-6 max-w-4xl">
-                <h3 className="text-3xl font-bold text-indigo-600 text-center">Experience</h3>
-                <p className="mt-6 text-lg text-gray-700 text-center">Over the past decade, Ayşe has helped hundreds of clients overcome their struggles and improve their mental well-being. She has worked with people from all walks of life, addressing issues such as:</p>
-                <ul className="mt-8 space-y-4 text-lg text-gray-700">
-                    <li>Anxiety and Panic Disorders</li>
-                    <li>Depression and Mood Disorders</li>
-                    <li>Trauma and Post-Traumatic Stress Disorder (PTSD)</li>
-                    <li>Relationship and Family Conflicts</li>
-                    <li>Grief and Loss</li>
-                    <li>Work-related Stress and Burnout</li>
+                <h3 className="text-3xl font-bold text-blue-950 text-center">Çalışma Alanlarım</h3>
+                <p className="mt-6 text-lg text-gray-700 text-center">Her bireyin yaşadığı zorlukların kendine özgü olduğunu kabul ederek, farklı alanlarda ihtiyaçlarınıza göre uyarlanmış bir destek sunuyorum. Çalışma alanlarım, duygusal, düşünsel ve ilişki odaklı zorlukları kapsayan çeşitli konuları içerir:</p>
+                <ul className="mt-8 space-y-4 text-lg text-gray-700 list-disc">
+                    <li>
+                        <span className='text-xl font-bold'>Kaygı ve Stres Yönetimi</span>
+                        <p className='my-2'>
+                            Günlük hayatta karşılaşılan kaygı, panik ve stres gibi zorlayıcı duyguları yönetmek için birlikte keşfetme, farkındalık kazanma ve başa çıkma stratejileri geliştirme.
+                        </p>
+                    </li>
+                    <li>
+                        <span className='text-xl font-bold'>Duygudurum Değişiklikleri ve Depresyon</span>
+                        <p className='my-2'>
+                            Yaşam kalitesini etkileyen duygudurum bozukluklarında (örneğin, depresyon, umutsuzluk veya motivasyon kaybı) destekleyici çözümler bulma.
+                        </p>
+                    </li>
+                    <li>
+                        <span className='text-xl font-bold'>Travma ve Yas Süreci</span>
+                        <p className='my-2'>
+                            Yaşanan travmatik deneyimlerin, kayıp ve yas süreçlerinin birey üzerindeki etkilerini anlamak ve iyileşme yolunda destekleyici bir yaklaşım sağlamak.
+                        </p>
+                    </li>
+                    <li>
+                        <span className='text-xl font-bold'>İlişki ve İletişim Sorunları</span>
+                        <p className='my-2'>
+                            Çiftler ve aile üyeleri arasındaki anlaşmazlıkları, güven sorunlarını veya iletişim engellerini ele alarak daha sağlıklı bağlar kurmayı hedefleme.
+                        </p>
+                    </li>
+                    <li>
+                        <span className='text-xl font-bold'>İş Yaşamında Zorluklar ve Tükenmişlik</span>
+                        <p className='my-2'>
+                            Çalışma ortamında karşılaşılan stres, verimlilik kaybı veya tükenmişlik gibi durumları yönetmek ve iş-yaşam dengesini kurmaya yönelik çözümler geliştirme.
+                        </p>
+                    </li>
+                    <li>
+                        <span className='text-xl font-bold'>Cinsel İşlev Bozuklukları</span>
+                        <p className='my-2'>
+                            Vajinismus, cinsel isteksizlik veya performans kaygısı gibi bireyin veya çiftin cinsel hayatını etkileyen sorunlarda, güvenli bir ortamda cinsel sağlığı destekleyen çözümler sunma.
+                        </p>
+                    </li>
                 </ul>
+                <p className="mt-6 text-lg text-gray-700 ">Bu alanlarda yürüttüğüm çalışmalarda, ihtiyaçlarınız ve hedefleriniz doğrultusunda size özel bir destek sağlamayı amaçlıyorum.</p>
             </div>
         </section>
     )
