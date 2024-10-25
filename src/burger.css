@@ -39,7 +39,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-    @apply bg-blue-950;
+    @apply bg-blue-950/80;
     @apply pt-4;
     @apply px-6;
     @apply text-lg;
@@ -53,12 +53,14 @@
 /* Wrapper for item list */
 .bm-item-list {
     @apply text-[#b8b7ad];
-    @apply p-3;
+    @apply py-20;
+    @apply px-3;
 }
 
 /* Individual item */
 .bm-item {
     @apply inline-block;
+    @apply py-2;
 }
 
 /* Styling of overlay */
