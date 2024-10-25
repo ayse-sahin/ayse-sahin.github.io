@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import Spinner from '../components/Spinner'
 import NotFound from './NotFound'
 import BlogCallToAction from '../components/BlogCallToAction'
+import BlogPostsShort from '../components/BlogPostsShort'
 
 const SingleBlogPage = () => {
     const [loading, setLoading] = useState(true)
@@ -55,6 +56,7 @@ const SingleBlogPage = () => {
                 </div>
             </main>
             <BlogCallToAction />
+            <BlogPostsShort title="Okumaya Devam Et" urlPrefix='../'/>
         </>
     )
 }

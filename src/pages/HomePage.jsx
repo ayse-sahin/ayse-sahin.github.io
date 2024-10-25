@@ -11,7 +11,7 @@ const HomePage = () => {
             <Hero />
             <Summary />
             <Services />
-            <BlogPostsShort />
+            <BlogPostsShort title="Blog Yazılarım" subtitle="Ruh sağlığı alanındaki güncel yazılarım"/>
             <AboutCallToAction />
         </>
     )

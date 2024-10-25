@@ -2,9 +2,9 @@ import React from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link } from 'react-router-dom'
 
-const BlogPostShort = ({ blog }) => {
+const BlogPostShort = ({ blog, urlPrefix = '' }) => {
     const style = {
-        backgroundImage: 'url(' + blog.imgUrl + ')'
+        backgroundImage: 'url(' + urlPrefix + blog.imgUrl + ')'
     }
 
     return (
