@@ -1,5 +1,5 @@
 .hero-background {
-    background-image: url('https://picsum.photos/1600/900');
+    background-image: url('src/assets/images/hero-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -39,7 +39,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent overlay */
+    background-color: rgba(0, 0, 0, 0.4); /* Dark transparent overlay */
 }
 
 .blog-content h2 {
