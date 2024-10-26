@@ -4,6 +4,12 @@ import BlogsHero from '../components/BlogsHero'
 
 const BlogsPage = () => {
     const [posts, setPosts] = useState(null)
+    const style = {
+        backgroundImage: 'url("src/assets/images/bg-light-vertical.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        position: 'relative'
+    } 
 
     useEffect(() => {
         fetch('/blogs.json')
@@ -15,7 +21,7 @@ const BlogsPage = () => {
     return (
         <>
             <BlogsHero />
-            <section className="py-16 bg-gray-100">
+            <section style={style} className="py-16 bg-gray-100">
                 <div className="container mx-auto px-6 text-center">
                     <div className="mt-10 grid grid-cols-1 gap-8">
                         { posts && posts.items.map((blog, index) => {

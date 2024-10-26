@@ -6,14 +6,17 @@ const CalendlyInline = () => {
         <InlineWidget
             url="https://calendly.com/psk-aysesahin/45min"
             styles={{
-              height: '825px'
+                height: '827px',
+                borderStyle: 'solid',
+                borderWidth: '2px',
+                borderColor: '#450a0a'
             }}
             pageSettings={{
-                backgroundColor: 'ffffff',
+                backgroundColor: 'd5ddc9',
                 hideEventTypeDetails: false,
                 hideLandingPageDetails: false,
-                primaryColor: '00a2ff',
-                textColor: '000000'
+                primaryColor: '450a0a',
+                textColor: '450a0a'
             }}
 
         />

@@ -5,15 +5,15 @@ import { Link } from 'react-router-dom'
 
 const NavLinksBurger = () => {
     return (
-        <div className='md:hidden'>
+        <div className='text-light md:hidden'>
             <Menu 
                 right 
                 itemListElement='nav' 
             >
-                <Link to="/about" className="block m-4 text-white hover:text-blue-500">Hakkımda</Link>
-                <Link to="/blogs" className="block m-4 text-white hover:text-blue-500">Blog</Link>
-                <Link to="/faq" className="block m-4 text-white hover:text-blue-500">Sık Sorulan Sorular</Link>
-                <Link to="/contact" className="block m-4 text-white hover:text-blue-500">İletişim</Link>
+                <Link to="/about" className="block m-4 hover:text-link-hover">Hakkımda</Link>
+                <Link to="/blogs" className="block m-4 hover:text-link-hover">Blog</Link>
+                <Link to="/faq" className="block m-4 hover:text-link-hover">Sık Sorulan Sorular</Link>
+                <Link to="/contact" className="block m-4 hover:text-link-hover">İletişim</Link>
             </Menu>
         </div>
     )

@@ -1,11 +1,11 @@
 .accordion {
-    @apply text-blue-950;
+    @apply text-darker;
     @apply rounded-xl;
 }
 
 .accordion__item + .accordion__item {
     @apply border-t;
-    @apply border-blue-950;
+    @apply border-darker;
 }
 
 .accordion__button {
@@ -19,7 +19,7 @@
 }
 
 .accordion__button:hover {
-    @apply text-blue-500;
+    @apply text-link-hover;
 }
 
 .accordion__button:before {
@@ -32,6 +32,7 @@
     @apply border-r-2;
     @apply border-current;
     @apply -rotate-45;
+    @apply transition-transform;
 }
 
 .accordion__button[aria-expanded='true']::before,

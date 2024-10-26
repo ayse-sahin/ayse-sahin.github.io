@@ -5,7 +5,7 @@ import Footer from '../components/Footer'
 
 const MainLayout = () => {
     return (
-        <div className="theme-font bg-gray-50 leading-relaxed tracking-wide text-gray-800">
+        <div className="theme-font bg-gray-50 leading-relaxed tracking-wide">
             <Navbar />
             <Outlet />
             <Footer />

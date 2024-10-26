@@ -7,9 +7,9 @@ const Navbar = () => {
   return (
         <>
             <NavLinksBurger />
-            <nav className="mt-4 bg-none text-white absolute w-full z-20">
+            <nav className="mt-4 bg-none text-light absolute w-full z-20">
                 <div className="mx-auto px-6 py-4 flex justify-between items-center">
-                    <Link to='/' className="px-6 text-3xl"><h1>Psikolog <br className='md:hidden'/>Ayşe Şahin</h1></Link>
+                    <Link to='/' className="px-6 text-orange-50 text-3xl"><h1>Psikolog <br className='md:hidden'/>Ayşe Şahin</h1></Link>
                     <NavLinksRegular />
                 </div>
             </nav>

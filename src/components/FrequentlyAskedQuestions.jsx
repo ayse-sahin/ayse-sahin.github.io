@@ -13,7 +13,15 @@ import ReactMarkdown from 'react-markdown'
 import React from 'react'
 
 const FrequentlyAskedQuestions = () => {
+    const style = {
+        backgroundImage: 'url("src/assets/images/bg-paper.jpg")',
+        backgroundSize: 'contain',
+        backgroundPosition: 'center',
+        position: 'relative'
+    } 
+
     return (
+        <section style={style}>
         <div className='container mx-auto py-10 px-6 md:px-20'>
             <Accordion allowZeroExpanded>
                 {faq.items.map((item) => (
@@ -32,6 +40,7 @@ const FrequentlyAskedQuestions = () => {
                 ))}
             </Accordion>
         </div>
+        </section>
     )
 }
 

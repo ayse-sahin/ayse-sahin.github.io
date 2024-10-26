@@ -19,8 +19,8 @@ const Services = () => {
     }, [])
 
     return (
-        <section style={style} className="text-rose-950 pt-24 pb-14 bg-gray-100">
-            <div className="container mx-auto px-6 text-center relative z-10">
+        <section style={style} className="text-darker pt-24 pb-14 bg-gray-100">
+            <div className="container mx-auto px-6 text-center">
                 <h2 className="text-4xl">Size nasıl yardım edebilirim?</h2>
                 <div className="pt-8 mt-10 grid grid-cols-1 md:grid-cols-3 gap-x-2 gap-y-12">
                     { services && services.items.map((service, index) => {

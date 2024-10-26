@@ -32,27 +32,34 @@ const SingleBlogPage = () => {
         return <NotFound />
     }
 
-    const style = {
+    const style1 = {
         backgroundImage: 'url(' + blog.imgUrl + ')',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'
     }
 
+    const style2 = {
+        backgroundImage: 'url("../src/assets/images/bg-light-vertical.jpg")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        position: 'relative'
+    } 
+
     blog.imgUrl = '../' + blog.imgUrl
 
     return (
         <>
-            <header style={style} className="pt-40 pb-32 text-white mb-4">
+            <header style={style1} className="pt-40 pb-32 text-light">
                 <div className='hero-overlay'></div>
-                <div className="w-full container mx-8 relative z-10 text-center text-white">
+                <div className="w-full container mx-8 relative z-10 text-center">
                     <h1 className="text-4xl font-bold"><ReactMarkdown>{blog.title}</ReactMarkdown></h1>
                     <p className="mt-4 font-bold text-lg">{blog.date}</p>
                 </div>
             </header>
-            <main className="py-8 bg-white">
+            <main style={style2} className="py-14 bg-white">
                 <div className="container mx-auto px-6 max-w-4xl">
-                    <article className="blog-content prose lg:prose-xl mx-auto text-gray-700"><ReactMarkdown>{blog.content}</ReactMarkdown></article>
+                    <article className="blog-content prose lg:prose-xl mx-auto text-dark-green"><ReactMarkdown>{blog.content}</ReactMarkdown></article>
                 </div>
             </main>
             <BlogCallToAction />
