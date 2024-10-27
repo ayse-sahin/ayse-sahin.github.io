@@ -68,9 +68,28 @@
     @apply list-disc;
 }
 
+.accordion__panel ul li + li{
+    @apply my-4
+}
+
 .accordion__panel ul li p{
     @apply indent-0;
     @apply p-0;
+}
+
+@media (max-width: 1024px) {
+    .accordion__button {
+        @apply px-4;
+        @apply text-left;
+    }
+    .accordion__panel p {
+        @apply px-4;
+        @apply text-left;
+    }
+    .accordion__panel ul {
+        @apply px-4;
+        @apply text-left;
+    }
 }
 
 /* -------------------------------------------------- */

@@ -17,14 +17,19 @@ const SingleBlogPage = () => {
         fetch('../blogs.json')
             .then(response => response.json())
             .then((data) => {
-                setBlog(data.items.find((blog) => blog.id === id ));
+                const b = data.items.find((blog) => blog.id === id ) 
+                setBlog(b);
                 setLoading(false);
+                return b
+            })
+            .then((b) => {
+                document.title = b.shortTitle
             })
             .catch((error) => {
                 console.error('Error fetching data:', error)
                 setLoading(false)
             })
-    }, [])
+    }, [id])
 
     if (loading) {
         return <Spinner loading={loading}/>
@@ -52,12 +57,9 @@ const SingleBlogPage = () => {
 
     return (
         <>
-            <Helmet>
-                <title>{blog.shortTitle}</title>
-            </Helmet>
             <header style={style1} className="pt-40 pb-32 text-light">
                 <div className='hero-overlay'></div>
-                <div className="w-full container mx-8 relative z-10 text-center">
+                <div className="w-full container px-8 relative z-10 text-center">
                     <h1 className="text-4xl font-bold"><ReactMarkdown>{blog.title}</ReactMarkdown></h1>
                     <p className="mt-4 font-bold text-lg">{blog.date}</p>
                 </div>

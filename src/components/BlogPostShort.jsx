@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import { Link } from 'react-router-dom'
 
@@ -15,7 +15,7 @@ const BlogPostShort = ({ blog, urlPrefix = '' }) => {
                 <ReactMarkdown>
                     {blog.description}
                 </ReactMarkdown></div>
-            <Link to={`/blogs/${blog.id}`} className="self-end mt-4 inline-block text-link-hover hover:underline">Devamını Oku</Link>
+            <Link onClick={() => { window.scroll(0, 0); }} to={`/blogs/${blog.id}`} className="self-end mt-4 inline-block text-link-hover hover:underline">Devamını Oku</Link>
         </div>
     )
 }

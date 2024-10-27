@@ -15,6 +15,7 @@ const CalendlyInline = () => {
                 backgroundColor: 'd5ddc9',
                 hideEventTypeDetails: false,
                 hideLandingPageDetails: false,
+                hideGdprBanner: true,
                 primaryColor: '450a0a',
                 textColor: '450a0a'
             }}
