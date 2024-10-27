@@ -59,7 +59,6 @@
 .accordion__panel ul{
     @apply indent-0;
     @apply pl-20;
-    @apply pb-10;
     @apply list-disc;
 }
 

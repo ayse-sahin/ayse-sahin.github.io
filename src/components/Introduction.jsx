@@ -13,7 +13,7 @@ const Introduction = () => {
                     <p className="self-center mt-6">Şu anda İspanya'da, Barselona Özerk Üniversitesi’nde araştırma asistanı olarak çalışıyor ve aynı zamanda online terapi hizmeti sunuyorum. Bilişsel Davranışçı Terapi ve Cinsel Terapi alanlarında eğitim ve süpervizyon almaya devam ederek, terapilerimde bireylerin ihtiyaçlarına uygun, güvenli ve profesyonel bir destek sunmayı amaçlıyorum.</p>
                 </div>
                 <div className='order-first xl:order-last xl:w-2/5 xl:pt-36'>
-                    <img src={aboutImg} alt="Profile Image" className="w-full mx-auto lg:w-1/2 xl:w-full rounded-lg shadow-md"/>
+                    <img src={aboutImg} alt="Profile Image" className="w-full md:w-2/3 lg:w-1/2 mx-auto xl:w-full rounded-lg shadow-md"/>
                 </div>
             </div>
         </section>

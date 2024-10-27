@@ -59,7 +59,7 @@ const SingleBlogPage = () => {
         <>
             <header style={style1} className="pt-40 pb-32 text-light">
                 <div className='hero-overlay'></div>
-                <div className="w-full container px-8 relative z-10 text-center">
+                <div className="w-full mx-auto container px-8 relative z-10 text-center">
                     <h1 className="text-4xl font-bold"><ReactMarkdown>{blog.title}</ReactMarkdown></h1>
                     <p className="mt-4 font-bold text-lg">{blog.date}</p>
                 </div>
