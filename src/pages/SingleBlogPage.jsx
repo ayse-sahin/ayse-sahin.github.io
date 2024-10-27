@@ -6,6 +6,7 @@ import NotFound from './NotFound'
 import BlogCallToAction from '../components/BlogCallToAction'
 import BlogPostsShort from '../components/BlogPostsShort'
 import { Helmet } from 'react-helmet'
+import Background from '../assets/images/bg-light-vertical.jpg'
 
 const SingleBlogPage = () => {
     const [loading, setLoading] = useState(true)
@@ -34,14 +35,14 @@ const SingleBlogPage = () => {
     }
 
     const style1 = {
-        backgroundImage: 'url(' + blog.imgUrl + ')',
+        backgroundImage: 'url(../' + blog.imgUrl + ')',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'
     }
 
     const style2 = {
-        backgroundImage: 'url("../src/assets/images/bg-light-vertical.jpg")',
+        backgroundImage: 'url("' + Background + '")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'

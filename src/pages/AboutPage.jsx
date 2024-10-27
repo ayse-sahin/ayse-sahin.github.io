@@ -4,10 +4,11 @@ import Introduction from '../components/Introduction'
 import Experience from '../components/Experience'
 import AboutCallToAction from '../components/AboutCallToAction'
 import { Helmet } from 'react-helmet'
+import Background from '../assets/images/bg-light-vertical.jpg'
 
 const AboutPage = () => {
     const style = {
-        backgroundImage: 'url("src/assets/images/bg-light-vertical.jpg")',
+        backgroundImage: 'url("' + Background + '")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'

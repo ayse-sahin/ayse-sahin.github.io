@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import ServiceCard from './ServiceCard'
+import Background from '../assets/images/bg-green.jpg'
 
 const Services = () => {
     const [services, setServices] = useState(null)
 
     const style = {
-        backgroundImage: 'url("src/assets/images/bg-green.jpg")',
+        backgroundImage: 'url("' + Background + '")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'

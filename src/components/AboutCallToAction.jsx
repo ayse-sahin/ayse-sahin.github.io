@@ -1,10 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Background from '../assets/images/bg-red.jpg'
 
 const AboutCallToAction = () => {
 
     const style = {
-        backgroundImage: 'url("src/assets/images/bg-red.jpg")',
+        backgroundImage: 'url("' + Background + '")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'

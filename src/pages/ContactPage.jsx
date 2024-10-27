@@ -3,10 +3,11 @@ import CalendlyInline from '../components/CalendlyInline'
 import ContactHero from '../components/ContactHero'
 import ContactInfo from '../components/ContactInfo'
 import { Helmet } from 'react-helmet'
+import Background from '../assets/images/bg-green.jpg'
 
 const ContactPage = () => {
     const style = {
-        backgroundImage: 'url("src/assets/images/bg-green.jpg")',
+        backgroundImage: 'url("' + Background + '")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'

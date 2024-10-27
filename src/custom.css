@@ -27,7 +27,7 @@
 }
 
 .hero-background {
-    background-image: url('src/assets/images/hero-bg.png');
+    background-image: url('../hero-bg.png');
     background-size: cover;
     background-position: center;
     position: relative;

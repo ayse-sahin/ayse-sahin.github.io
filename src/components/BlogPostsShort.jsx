@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'
 import BlogPostShort from './BlogPostShort'
 import { Link } from 'react-router-dom'
+import Background from '../assets/images/bg-light.jpg'
 
 
 const BlogPostsShort = ({ title, subtitle = '', urlPrefix = ''}) => {
     const [posts, setPosts] = useState(null)
     const style = {
-        backgroundImage: 'url("' + urlPrefix + 'src/assets/images/bg-light.jpg")',
+        backgroundImage: 'url("' + urlPrefix + Background + '")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'

@@ -1,9 +1,10 @@
 import aboutImg from '../assets/images/about-img.png'
 import React from 'react'
+import Background from '../assets/images/bg-light.jpg'
 
 const TherapyApproach = () => {
     const style = {
-        backgroundImage: 'url("src/assets/images/bg-light.jpg")',
+        backgroundImage: 'url("' + Background + '")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'

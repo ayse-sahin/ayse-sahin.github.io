@@ -8,13 +8,14 @@ import {
 import '../accordion.css'
 import faq from '../assets/data/faq.json'
 import ReactMarkdown from 'react-markdown'
+import Background from '../assets/images/bg-paper.jpg'
 
 
 import React from 'react'
 
 const FrequentlyAskedQuestions = () => {
     const style = {
-        backgroundImage: 'url("src/assets/images/bg-paper.jpg")',
+        backgroundImage: 'url("' + Background + '")',
         backgroundSize: 'contain',
         backgroundPosition: 'center',
         position: 'relative'

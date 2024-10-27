@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import BlogPostCard from '../components/BlogPostCard'
 import BlogsHero from '../components/BlogsHero'
 import { Helmet } from 'react-helmet'
+import Background from '../assets/images/bg-light-vertical.jpg'
 
 const BlogsPage = () => {
     const [posts, setPosts] = useState(null)
     const style = {
-        backgroundImage: 'url("src/assets/images/bg-light-vertical.jpg")',
+        backgroundImage: 'url("' + Background + '")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         position: 'relative'
