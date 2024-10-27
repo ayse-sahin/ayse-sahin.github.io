@@ -1,0 +1,30 @@
+{
+    "title": "Services",
+    "description": "Services offered by Ayse Sahin",
+    "items": [
+        {
+            "title": "İlişki Problemleri",
+            "text": "İlişkiler bazen karmaşık hale gelebilir. Eğer iletişim sorunları yaşıyorsanız veya ilişkilerinizde çatışmalar varsa, bu durumu daha iyi anlamanız ve çözmeniz için size yol gösterebilirim."
+        },
+        {
+            "title": "Travma ve Duygusal İyileşme",
+            "text": "Yaşadığınız travmalar, günlük yaşamınızı etkileyebilir ve duygusal yükler taşımanıza sebep olabilir. Bu duygularla başa çıkmak ve iyileşmek için profesyonel destek sunabilirim."
+        },
+        {
+            "title": "Kaygı ve Stres",
+            "text": "Birçok insan yoğun stres ve kaygıyla başa çıkmakta zorlanıyor. İş, okul veya aile baskılarıyla başa çıkmak için daha sağlıklı yollar arıyorsanız size rehberlik edebilirim."
+        },
+        {
+            "title": "Cinsel Sağlık ve Duygusal Yakınlık Sorunları",
+            "text": "Cinsel sağlıkla ilgili konuşmak zor olabilir, ancak yaşadığınız sıkıntılar için yardım aramakta bir sakınca yoktur. Sağlıklı bir cinsel yaşam ve duygusal yakınlık için destek almak, ilişkinizi güçlendirebilir."
+        },
+        {
+            "title": "Hayat Geçişleri ve Kişisel Gelişim",
+            "text": "Büyük değişimler, yeni başlangıçlar ve belirsizlik duygusu, herkesin hayatında yer alabilir. Bu süreçlerde kendinizi yalnız hissetmemek ve yön bulmak için size yardımcı olabilirim."
+        },
+        {
+            "title": "Göçmenlik Psikolojisi",
+            "text": "Yeni bir ülkeye taşınmak, birçok zorlukla birlikte gelir. Kültürel farklılıklarla başa çıkmak ve sosyal entegrasyon sağlamak için destek aramak, bu süreci daha kolay hale getirebilir."
+        }
+    ]
+}
