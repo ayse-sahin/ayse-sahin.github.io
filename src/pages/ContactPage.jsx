@@ -2,6 +2,7 @@ import React from 'react'
 import CalendlyInline from '../components/CalendlyInline'
 import ContactHero from '../components/ContactHero'
 import ContactInfo from '../components/ContactInfo'
+import { Helmet } from 'react-helmet'
 
 const ContactPage = () => {
     const style = {
@@ -13,6 +14,9 @@ const ContactPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>İletişim - Ayşe Şahin</title>
+            </Helmet>
             <ContactHero />
             <section style={style} className="py-16 bg-white">
                 <div className="container mx-auto px-6 max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12">

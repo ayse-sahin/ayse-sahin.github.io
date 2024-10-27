@@ -2,11 +2,11 @@ import React from 'react'
 
 const Experience = () => {
     return (
-        <section className="py-16 bg-white">
+        <section className="py-16 text-darker">
             <div className="container mx-auto px-6 max-w-4xl">
-                <h3 className="text-3xl font-bold text-blue-950 text-center">Çalışma Alanlarım</h3>
-                <p className="mt-6 text-lg text-gray-700 text-center">Her bireyin yaşadığı zorlukların kendine özgü olduğunu kabul ederek, farklı alanlarda ihtiyaçlarınıza göre uyarlanmış bir destek sunuyorum. Çalışma alanlarım, duygusal, düşünsel ve ilişki odaklı zorlukları kapsayan çeşitli konuları içerir:</p>
-                <ul className="mt-8 space-y-4 text-lg text-gray-700 list-disc">
+                <h3 className="text-3xl font-bold text-center">Çalışma Alanlarım</h3>
+                <p className="mt-6 text-lg text-center">Her bireyin yaşadığı zorlukların kendine özgü olduğunu kabul ederek, farklı alanlarda ihtiyaçlarına göre uyarlanmış bir destek sunuyorum. Çalışma alanlarım, duygusal, düşünsel ve ilişki odaklı zorlukları kapsayan çeşitli konuları içeriyor.</p>
+                <ul className="mt-8 space-y-4 text-lg list-disc">
                     <li>
                         <span className='text-xl font-bold'>Kaygı ve Stres Yönetimi</span>
                         <p className='my-2'>
@@ -44,7 +44,7 @@ const Experience = () => {
                         </p>
                     </li>
                 </ul>
-                <p className="mt-6 text-lg text-gray-700 ">Bu alanlarda yürüttüğüm çalışmalarda, ihtiyaçlarınız ve hedefleriniz doğrultusunda size özel bir destek sağlamayı amaçlıyorum.</p>
+                <p className="mt-6 text-lg">Bu alanlarda yürüttüğüm çalışmalarda, ihtiyaçlarınız ve hedefleriniz doğrultusunda size özel bir destek sağlamayı amaçlıyorum.</p>
             </div>
         </section>
     )

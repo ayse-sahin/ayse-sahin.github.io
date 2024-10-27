@@ -8,7 +8,7 @@ const Footer = () => {
                     <p>&copy; 2024 Ayşe Şahin - Bütün Hakları Saklıdır</p>
                 </div>
                 <div>
-                    <p>Developed by <a className='underline hover:text-link-hover' href='https://github.com/Quas-r' target='_blank'>Bora Eroğlu</a></p>
+                    <p>Developed by <a className='transition-colors duration-500 underline hover:text-link-hover' href='https://github.com/Quas-r' target='_blank'>Bora Eroğlu</a></p>
                 </div>
             </div>
         </footer>

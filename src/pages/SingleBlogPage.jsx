@@ -5,6 +5,7 @@ import Spinner from '../components/Spinner'
 import NotFound from './NotFound'
 import BlogCallToAction from '../components/BlogCallToAction'
 import BlogPostsShort from '../components/BlogPostsShort'
+import { Helmet } from 'react-helmet'
 
 const SingleBlogPage = () => {
     const [loading, setLoading] = useState(true)
@@ -50,6 +51,9 @@ const SingleBlogPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>{blog.shortTitle}</title>
+            </Helmet>
             <header style={style1} className="pt-40 pb-32 text-light">
                 <div className='hero-overlay'></div>
                 <div className="w-full container mx-8 relative z-10 text-center">

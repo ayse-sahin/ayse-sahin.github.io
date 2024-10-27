@@ -4,10 +4,14 @@ import Services from '../components/Services'
 import Summary from '../components/Summary'
 import BlogPostsShort from '../components/BlogPostsShort'
 import AboutCallToAction from '../components/AboutCallToAction'
+import { Helmet } from 'react-helmet'
 
 const HomePage = () => {
     return (
         <>
+            <Helmet>
+                <title>Ayşe Şahin - Online Terapi</title>
+            </Helmet>
             <Hero />
             <Summary />
             <Services />

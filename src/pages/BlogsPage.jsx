@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import BlogPostCard from '../components/BlogPostCard'
 import BlogsHero from '../components/BlogsHero'
+import { Helmet } from 'react-helmet'
 
 const BlogsPage = () => {
     const [posts, setPosts] = useState(null)
@@ -20,6 +21,9 @@ const BlogsPage = () => {
 
     return (
         <>
+            <Helmet>
+                <title>Psikoloji Blogları</title>
+            </Helmet>
             <BlogsHero />
             <section style={style} className="py-16 bg-gray-100">
                 <div className="container mx-auto px-6 text-center">
