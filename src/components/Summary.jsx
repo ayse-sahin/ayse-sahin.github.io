@@ -18,7 +18,7 @@ const Summary = () => {
                 <div className='text-left md:text-justify col-span-2'>
                     <h2 className="text-4xl italic">Hoş Geldiniz!</h2>
                     <p className="mt-4">Ben Ayşe, bir psikolog olarak danışanlarıma yaşamlarındaki zorlukların üstesinden gelmeleri için yardımcı oluyorum. Online terapi ile kişisel yolculuklarında danışanlarıma rehberlik ediyor, kendi içsel gücünü keşfetmelerine katkıda bulunuyorum.</p>
-                    <p className="mt-4">Kaygı, travma ve yas süreçleri, ilişkisel çatışmalar, cinsel sorunlar ve göçmenlik psikolojisi gibi konularda destek sağlarken güvenilir bir alan sunuyorum. Online terapi hizmetlerimle, dünyanın dört bir yanındaki bireylerin ihtiyaçlarına yanıt veriyorum.</p>
+                    <p className="mt-4">Kaygı, depresyon, travma ve yas süreçleri, ilişkisel çatışmalar ve göçmenlik psikolojisi gibi konularda destek sağlarken güvenilir bir alan sunuyorum.</p>
                     <p className="mt-4">Eğer siz de kendi hikayenizi güvenle paylaşabileceğiniz bir destek arıyorsanız, birlikte yol alabiliriz.</p>
                     <Link onClick={() => { window.scroll(0, 0); }} to="/about" className="transition-colors duration-500 mt-6 inline-block bg-darker text-light px-4 py-2 rounded-lg shadow-lg hover:bg-link-hover">Hakkımda</Link>
                 </div>

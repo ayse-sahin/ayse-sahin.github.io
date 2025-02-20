@@ -33,7 +33,7 @@ const FrequentlyAskedQuestions = () => {
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
-                            <ReactMarkdown>
+                            <ReactMarkdown className="faq-answer">
                             {item.content}
                             </ReactMarkdown>
                         </AccordionItemPanel>

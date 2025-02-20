@@ -74,3 +74,8 @@
     @apply underline;
     @apply text-link-hover;
 }
+
+.faq-answer a {
+    @apply underline;
+    @apply text-link-hover;
+}

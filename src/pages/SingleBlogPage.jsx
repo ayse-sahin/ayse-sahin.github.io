@@ -61,7 +61,7 @@ const SingleBlogPage = () => {
                 <div className='hero-overlay'></div>
                 <div className="w-full mx-auto container px-8 relative z-10 text-center">
                     <h1 className="text-4xl font-bold"><ReactMarkdown>{blog.title}</ReactMarkdown></h1>
-                    <p className="mt-4 font-bold text-lg">{blog.date}</p>
+                    <p className="mt-4 text-lg">{blog.date}</p>
                 </div>
             </header>
             <main style={style2} className="py-14 bg-white">

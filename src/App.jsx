@@ -1,4 +1,4 @@
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
+import { Route, Routes, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
 import React from 'react'
 import HomePage from './pages/HomePage'
 import MainLayout from './layouts/MainLayout'
@@ -14,10 +14,10 @@ const router = createBrowserRouter(
         <Route path='/' element={<MainLayout />}>
             <Route index element={<HomePage />}/>
             <Route path='/about' element={<AboutPage />}/>
+            <Route path='/blogs/:id' element={<SingleBlogPage />}/>
             <Route path='/blogs' element={<BlogsPage />}/>
             <Route path='/contact' element={<ContactPage />}/>
             <Route path='/faq' element={<FAQPage />}/>
-            <Route path='/blogs/:id' element={<SingleBlogPage />}/>
             <Route path='*' element={<NotFound />}/>
         </Route>
     )
