@@ -29,7 +29,7 @@ const Services = () => {
                         return <ServiceCard key={index} title={service.title} text={service.text}/>
                     }) }
                 </div>
-                <Link onClick={() => { window.scroll(0, 0); }} to="/about" className="transition-colors duration-500 mt-6 inline-block bg-dark-green text-light px-4 py-2 rounded-lg shadow-lg hover:bg-light hover:text-dark-green">Daha Fazla</Link>
+                <Link onClick={() => { window.scroll(0, 0); }} to="/about" className="mt-4 text-lg inline-block text-darker underline">Daha Fazla</Link>
             </div>
         </section>
     )

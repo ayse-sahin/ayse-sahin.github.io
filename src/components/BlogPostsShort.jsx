@@ -26,7 +26,7 @@ const BlogPostsShort = ({ title, subtitle = '', urlPrefix = ''}) => {
                 <h2 className="text-4xl font-bold">{title}</h2>
                 <p className="mt-4">{subtitle}</p>
                 <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8">
-                    { posts && posts.items.map((blog, index) => {
+                    { posts && posts.items.slice(0, 3).map((blog, index) => {
                         return <BlogPostShort key={index} blog={blog} urlPrefix={urlPrefix}/>
                     }) }
                 </div>

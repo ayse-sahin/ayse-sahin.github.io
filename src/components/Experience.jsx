@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Experience = () => {
     return (
@@ -48,7 +49,7 @@ const Experience = () => {
                         <p className='my-2'>Yeni bir ülkeye yerleşme dönemindeki zorlukları daha rahat aşabilmek için sosyokültürel farkları anlamak, yalnızlık hissini azaltmak ve yeni ortama sağlıklı bir şekilde uyum sağlamak için destek almak.</p>
                     </li>
                 </ul>
-                <p className="mt-6 text-lg">Bu alanlarda yürüttüğüm çalışmalarda, ihtiyaçlarınız ve hedefleriniz doğrultusunda size özel bir destek sağlamayı amaçlıyorum.</p>
+                <p className="mt-6 text-lg">Bu alanlarda yürüttüğüm çalışmalarda, ihtiyaçlarınız ve hedefleriniz doğrultusunda size özel bir destek sağlamayı amaçlıyorum. Daha detaylı okumalar için <Link onClick={() => { window.scroll(0, 0); }} to="/blogs" className="text-link-hover">blog yazılarımı</Link> inceleyebilirsiniz.</p>
             </div>
         </section>
     )

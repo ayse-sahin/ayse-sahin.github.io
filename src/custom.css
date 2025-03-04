@@ -104,6 +104,13 @@
     @apply text-link-hover;
 }
 
+.blog-content hr {
+    @apply h-0.5;
+    @apply my-4;
+    @apply bg-dark-green;
+    @apply rounded-sm;
+}
+
 .faq-answer a {
     @apply underline;
     @apply text-link-hover;
