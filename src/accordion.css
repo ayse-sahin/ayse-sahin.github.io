@@ -1,5 +1,6 @@
 .accordion {
     @apply text-darker;
+    @apply text-lg;
     @apply rounded-xl;
 }
 
