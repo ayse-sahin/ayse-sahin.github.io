@@ -4,8 +4,8 @@ import { useParams } from 'react-router-dom'
 import Spinner from '../components/Spinner'
 import NotFound from './NotFound'
 import BlogCallToAction from '../components/BlogCallToAction'
+import AboutCallToAction from '../components/AboutCallToAction'
 import BlogPostsShort from '../components/BlogPostsShort'
-import { Helmet } from 'react-helmet'
 import Background from '../assets/images/bg-light-vertical.jpg'
 
 const SingleBlogPage = () => {
@@ -71,6 +71,7 @@ const SingleBlogPage = () => {
             </main>
             <BlogCallToAction />
             <BlogPostsShort title="Daha Fazla" urlPrefix='../'/>
+            <AboutCallToAction />
         </>
     )
 }

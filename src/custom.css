@@ -43,12 +43,25 @@
     background-color: rgba(0, 0, 0, 0.4); /* Dark transparent overlay */
 }
 
-.blog-content h2 {
+.blog-content {
+    @apply text-lg;
+}
+
+.blog-content h1 {
     @apply font-serif;
-    @apply text-xl;
+    @apply text-3xl;
     @apply font-bold;
     @apply text-dark-green;
-    @apply py-4;
+    @apply pt-4;
+    @apply pb-4;
+}
+
+.blog-content h2 {
+    @apply font-serif;
+    @apply text-2xl;
+    @apply font-bold;
+    @apply text-dark-green;
+    @apply pt-4;
 }
 
 .blog-content h3 {
@@ -56,18 +69,34 @@
     @apply text-xl;
     @apply font-bold;
     @apply text-dark-green;
-    @apply py-4;
+}
+
+.blog-content strong {
+    @apply font-serif;
+    @apply font-bold;
 }
 
 .blog-content p {
-    @apply indent-8;
-    @apply pb-8;
-    @apply text-lg;
+    @apply text-justify;
+    @apply pb-4;
 }
 
 .blog-content ul {
-    @apply pb-4;
     @apply list-disc;
+    @apply pb-4;
+    @apply pl-4;
+    @apply text-justify;
+}
+
+.blog-content ol {
+    @apply pb-4;
+    @apply pl-4;
+    @apply list-decimal;
+    @apply text-justify;
+}
+
+.blog-content li {
+    @apply pt-1;
 }
 
 .blog-content a {
@@ -76,6 +105,11 @@
 }
 
 .faq-answer a {
+    @apply underline;
+    @apply text-link-hover;
+}
+
+.link {
     @apply underline;
     @apply text-link-hover;
 }

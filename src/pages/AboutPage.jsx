@@ -21,7 +21,7 @@ const AboutPage = () => {
             </Helmet>
             <AboutHero />
             <Introduction />
-            <Experience />
+            <Experience id="specialties"/>
             <AboutCallToAction />
         </div>
     )

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ServiceCard from './ServiceCard'
 import Background from '../assets/images/bg-green.jpg'
+import { Link } from 'react-router-dom'
 
 const Services = () => {
     const [services, setServices] = useState(null)
@@ -28,6 +29,7 @@ const Services = () => {
                         return <ServiceCard key={index} title={service.title} text={service.text}/>
                     }) }
                 </div>
+                <Link onClick={() => { window.scroll(0, 0); }} to="/about" className="transition-colors duration-500 mt-6 inline-block bg-dark-green text-light px-4 py-2 rounded-lg shadow-lg hover:bg-light hover:text-dark-green">Daha Fazla</Link>
             </div>
         </section>
     )

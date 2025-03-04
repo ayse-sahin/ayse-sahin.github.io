@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import BlogPostCard from '../components/BlogPostCard'
+import BlogCallToAction from '../components/BlogCallToAction'
 import BlogsHero from '../components/BlogsHero'
 import { Helmet } from 'react-helmet'
 import Background from '../assets/images/bg-light-vertical.jpg'
@@ -35,7 +36,7 @@ const BlogsPage = () => {
                     </div>
                 </div>
             </section>
-
+            <BlogCallToAction />
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 import FAQHero from '../components/FAQHero'
 import FrequentlyAskedQuestions from '../components/FrequentlyAskedQuestions'
-import AboutCallToAction from '../components/AboutCallToAction'
+import BlogCallToAction from '../components/BlogCallToAction'
 import { Helmet } from 'react-helmet'
 
 const FAQPage = () => {
@@ -12,7 +12,7 @@ const FAQPage = () => {
             </Helmet>
             <FAQHero />
             <FrequentlyAskedQuestions />
-            <AboutCallToAction />
+            <BlogCallToAction />
         </>
     )
 }

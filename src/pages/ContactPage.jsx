@@ -3,6 +3,7 @@ import CalendlyInline from '../components/CalendlyInline'
 import ContactHero from '../components/ContactHero'
 import ContactInfo from '../components/ContactInfo'
 import { Helmet } from 'react-helmet'
+import BlogCallToAction from '../components/BlogCallToAction'
 import Background from '../assets/images/bg-green.jpg'
 
 const ContactPage = () => {
@@ -29,7 +30,7 @@ const ContactPage = () => {
                     </div>
                 </div>
             </section>
-
+            <BlogCallToAction />
         </>
     )
 }
