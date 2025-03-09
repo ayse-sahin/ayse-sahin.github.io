@@ -1,0 +1,30 @@
+{
+    "title": "Services",
+    "description": "Services offered by Ayse Sahin",
+    "items": [
+        {
+            "title": "Travma ve Duygusal İyileşme",
+            "text": "Yaşadığınız travmalar, günlük yaşamınızı etkileyebilir ve duygusal yükler taşımanıza sebep olabilir. Bu duygularla başa çıkmak ve iyileşmek için profesyonel destek almak hayatınıza devam etmek için büyük önem taşır."
+        },
+        {
+            "title": "Kaygı ve Anksiyete Bozuklukları",
+            "text": "Yoğun kaygı, panik atak veya sosyal ortamlarda aşırı çekingenlik gibi durumlar günlük yaşamınızı olumsuz etkileyebilir. Panik Bozukluğu, Sosyal Anksiyete Bozukluğu ve Yaygın Anksiyete Bozukluğu gibi sorunlarla baş etmek için terapi büyük önem taşır."
+        },
+        {
+            "title": "Depresyon ve Umutsuzluk",
+            "text": "Süregelen mutsuzluk, umutsuzluk veya çaresizlik duyguları hayatın doğal akışını engelleyebilir. Bu süreçte terapi, duygu durumunuzu düzenleyebilmenize ve alternatif baş etme stratejileri geliştirmenize yardımcı olur."
+        },
+        {
+            "title": "Takıntılar ve Obsesif Kompulsif Bozukluk (OKB)",
+            "text": "İstenmeden tekrar tekrar akla gelen düşünceler ve bu kaygıyı hafifletmek için yapılan yineleyici davranışlar, günlük hayatı zorlaştırabilir. Terapi sürecinde, bu döngüyü anlamak ve kırmak için etkili yöntemler öğrenerek zihinsel rahatlık sağlanabilir."
+        },
+        {
+            "title": "Hayat Geçişleri ve Farkındalık",
+            "text": "Büyük değişimler, yeni başlangıçlar ve belirsizlik duygusu, herkesin hayatında yer alabilir. Bu süreçlerde duygusal destek almak, farkındalığınızı artırarak yeni hayat düzeninize daha rahat uyum sağlamanıza yardımcı olur."
+        },
+        {
+            "title": "Göçmenlik Psikolojisi",
+            "text": "Yeni bir ülkeye yerleşmek, kültür farklılıkları ve uyum süreci nedeniyle stresli olabilir. Bu zorlukları aşabilmek için sosyokültürel farkları anlamak, yalnızlık hissini azaltmak ve yeni ortama sağlıklı bir şekilde uyum sağlamak için terapi desteği alınabilir."
+        }
+    ]
+}
