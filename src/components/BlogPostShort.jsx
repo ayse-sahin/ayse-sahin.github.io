@@ -11,7 +11,7 @@ const BlogPostShort = ({ blog, urlPrefix = '' }) => {
         <Link onClick={() => { window.scroll(0, 0); }} to={`/blogs/${blog.id}`} className="grid grid-cols-1 shadow-xl rounded-lg p-4">
             <div style={style} className='flex w-full rounded-t-md h-24 mb-4 justify-center bg-cover'> </div>
             <h3 className="text-xl font-serif-override font-bold text-dark-green">{blog.title}</h3>
-            <div className="mt-2 text-justify text-dark-green">
+            <div className="mt-2 sm:text-justify md:text-center lg:text-justify text-dark-green">
                 <ReactMarkdown>
                     {blog.description}
                 </ReactMarkdown></div>
