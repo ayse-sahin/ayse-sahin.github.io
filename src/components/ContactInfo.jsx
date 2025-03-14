@@ -31,7 +31,7 @@ const ContactInfo = () => {
             </p>
 
             <Link onClick={clickedButton} to="https://forms.gle/qXvyS8AvQqqMdXCL6" target='_blank' className="">
-                <div className="transition-colors text-lighter duration-500 w-fit mt-8 text-center space-y-4 bg-darker px-6 py-3 rounded-lg shadow-lg hover:bg-link-hover">
+                <div className="inline-block transition-colors text-lighter duration-500 w-fit mt-8 text-center space-y-4 bg-darker px-6 py-3 rounded-lg shadow-lg hover:bg-link-hover">
                     Randevu Formu
                 </div>
             </Link>
