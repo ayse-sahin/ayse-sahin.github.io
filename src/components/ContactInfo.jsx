@@ -14,6 +14,12 @@ const Callto = ({ phone, children }) => {
 };
 
 const ContactInfo = () => {
+    const clickedButton = () => {
+    //This will trigger the conversion 
+    window.gtag('config', 'AW-16912307836');
+    window.gtag('event', 'conversion', {'send_to': 'AW-16912307836/oElSCMrmuqoaEPystYA_'});
+    }
+
     return (
         <div className='text-darker'>
             <h2 className="text-4xl font-bold">İletişim Bilgilerim</h2>
@@ -24,7 +30,7 @@ const ContactInfo = () => {
                 Soru sormak veya daha fazla bilgi almak için mail veya mesaj atabilirsiniz.
             </p>
 
-            <Link to="https://forms.gle/qXvyS8AvQqqMdXCL6" target='_blank' className="">
+            <Link onClick={clickedButton} to="https://forms.gle/qXvyS8AvQqqMdXCL6" target='_blank' className="">
                 <div className="transition-colors text-lighter duration-500 w-fit mt-8 text-center space-y-4 bg-darker px-6 py-3 rounded-lg shadow-lg hover:bg-link-hover">
                     Randevu Formu
                 </div>
