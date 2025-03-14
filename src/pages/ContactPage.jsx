@@ -5,6 +5,7 @@ import ContactInfo from '../components/ContactInfo'
 import { Helmet } from 'react-helmet'
 import BlogCallToAction from '../components/BlogCallToAction'
 import Background from '../assets/images/bg-green.jpg'
+import { Link } from 'react-router-dom'
 
 const ContactPage = () => {
     const style = {
@@ -21,13 +22,8 @@ const ContactPage = () => {
             </Helmet>
             <ContactHero />
             <section style={style} className="py-16 bg-white">
-                <div className="container mx-auto px-6 max-w-4xl grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className='mt-4 md:mt-20'>
-                        <ContactInfo />
-                    </div>
-                    <div>
-                        <CalendlyInline />
-                    </div>
+                <div className="container mt-4 mx-auto px-6 max-w-4xl">
+                    <ContactInfo />
                 </div>
             </section>
             <BlogCallToAction />

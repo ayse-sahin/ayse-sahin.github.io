@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Mailto = ({ email, subject = '', body = '', children }) => {
   let params = subject || body ? '?' : '';
@@ -17,14 +18,17 @@ const ContactInfo = () => {
         <div className='text-darker'>
             <h2 className="text-4xl font-bold">İletişim Bilgilerim</h2>
             <p className="mt-10 text-lg">
-                Randevu almak için mail veya mesaj yoluyla iletişime geçebilir ya da 
-                <span className='inline md:hidden'> aşağıdaki </span>
-                <span className='hidden md:inline'> sağdaki </span>
-                panelden randevu oluşturabilirsiniz.
+                Ücretsiz ön görüşme randevusu almak için aşağıdaki butona basarak formu doldurabilirsiniz.
             </p>
-            <p className="mt-8 text-lg">
+            <p className="mt-4 text-lg">
                 Soru sormak veya daha fazla bilgi almak için mail veya mesaj atabilirsiniz.
             </p>
+
+            <Link to="https://forms.gle/qXvyS8AvQqqMdXCL6" target='_blank' className="">
+                <div className="transition-colors text-lighter duration-500 w-fit mt-8 text-center space-y-4 bg-darker px-6 py-3 rounded-lg shadow-lg hover:bg-link-hover">
+                    Randevu Formu
+                </div>
+            </Link>
 
             <div className="mt-8">
                 <h3 className="text-lg font-serif-override font-semibold">Email</h3>
