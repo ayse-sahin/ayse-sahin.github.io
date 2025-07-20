@@ -24,7 +24,7 @@ const ContactInfo = () => {
         <div className='text-darker'>
             <h2 className="text-4xl font-bold">İletişim Bilgilerim</h2>
             <p className="mt-10 text-lg">
-                Ücretsiz ön görüşme randevusu almak için aşağıdaki butona basarak formu doldurabilirsiniz.
+                Randevu almak için aşağıdaki butona basarak formu doldurabilirsiniz.
             </p>
             <p className="mt-4 text-lg">
                 Soru sormak veya daha fazla bilgi almak için mail veya mesaj atabilirsiniz.

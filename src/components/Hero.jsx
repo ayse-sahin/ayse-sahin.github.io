@@ -11,7 +11,7 @@ const Hero = () => {
                     <p className="mt-4 text-lg">Kendi Güvenli Ortamınızda İstediğiniz Zaman Online Terapi Alın</p>
                     <Link to="/contact" className="">
                         <div className="inline-block transition-colors duration-500 w-fit mt-14 text-center space-y-4 bg-darker px-6 py-3 rounded-lg shadow-lg hover:bg-link-hover">
-                            Ücretsiz Ön Görüşme<br className='md:hidden'/> İçin Randevu Al
+                            Randevu Al
                         </div>
                     </Link>
                 </div>
