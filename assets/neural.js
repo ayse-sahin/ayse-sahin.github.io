@@ -29,18 +29,40 @@
       this.pulses = [];
       this.t = 0;
       this.resize();
-      window.addEventListener('resize', () => this.resize());
+      if (window.ResizeObserver) {
+        this._ro = new ResizeObserver(entries => {
+          const cr = entries[0] && entries[0].contentRect;
+          this.resize(cr);
+        });
+        this._ro.observe(this.c);
+      } else {
+        window.addEventListener('resize', () => this.resize());
+      }
+      // re-measure shortly after mount in case initial layout wasn't settled yet
+      // (fonts/images reflowing the section after first paint)
+      requestAnimationFrame(() => this.resize());
+      setTimeout(() => this.resize(), 300);
+      if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => this.resize());
       if (reduce) { this.step(true); }
       else { this.loop(); }
     }
 
-    resize() {
-      const r = this.c.getBoundingClientRect();
+    resize(rect) {
+      // Prefer the ResizeObserver's contentRect (unaffected by ancestor CSS
+      // transforms/scaling) over getBoundingClientRect, which reports the
+      // post-transform visual size and can disagree with it — that mismatch
+      // is what made the field intermittently render zoomed-out and blurry.
+      const r = rect || this.c.getBoundingClientRect();
       this.dpr = Math.min(window.devicePixelRatio || 1, 2);
-      this.w = Math.max(1, r.width);
-      this.h = Math.max(1, r.height);
-      this.c.width = this.w * this.dpr;
-      this.c.height = this.h * this.dpr;
+      const w = Math.max(1, r.width);
+      const h = Math.max(1, r.height);
+      const bw = Math.round(w * this.dpr), bh = Math.round(h * this.dpr);
+      if (this.nodes && Math.abs(w - this.w) < 1 && Math.abs(h - this.h) < 1 &&
+          this.c.width === bw && this.c.height === bh) return;
+      this.w = w;
+      this.h = h;
+      this.c.width = bw;
+      this.c.height = bh;
       this.ctx.setTransform(this.dpr, 0, 0, this.dpr, 0, 0);
       const target = Math.round(this.baseCount * (this.w * this.h) / (1280 * 720));
       const n = Math.max(8, Math.min(target, 120));
