@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Research · Ayşe Şahin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('as-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{--serif:'Fraunces',serif;--bg:#fcedd6;--bg-2:#fff8ed;--band:#f9dfbb;--ink:#34221a;--ink-2:#5a4230;--ink-3:#73563a;--accent:#e21d5e;--accent-2:#b3164a;--line:rgba(52,34,26,.16);--todo:#fff3c4;--todo-ink:#7a4d00;color-scheme:light}
+:root[data-theme=dark]{--bg:#1b1310;--bg-2:#261b16;--band:#2c1f19;--ink:#f6e7d2;--ink-2:#dcc6aa;--ink-3:#b59c80;--accent:#ff5c8f;--accent-2:#ff86ac;--line:rgba(246,231,210,.16);--todo:#3b2d10;--todo-ink:#f3c76a;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1b1310;--bg-2:#261b16;--band:#2c1f19;--ink:#f6e7d2;--ink-2:#dcc6aa;--ink-3:#b59c80;--accent:#ff5c8f;--accent-2:#ff86ac;--line:rgba(246,231,210,.16);--todo:#3b2d10;--todo-ink:#f3c76a;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:var(--accent-2)}a:hover{color:var(--accent)}
+::selection{background:var(--accent);color:#fff}
+</style>
+</helmet>
+
+<dc-import name="nav" current="research" hint-size="100%,64px" style="position:fixed;top:0;left:0;right:0;z-index:40;display:block"></dc-import>
+<div aria-hidden="true" style="height:64px"></div>
+
+<main>
+<section data-screen-label="Research · Intro" style="padding:clamp(48px,8vw,96px) 0 clamp(40px,6vw,64px)">
+  <div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
+    
+    <h1 style="font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.6vw,48px);line-height:1.05;letter-spacing:-.02em;margin:0 0 20px"><em style="color: var(--accent-2); font-style: normal;">Research Experience</em></h1>
+    <p style="font-family:var(--serif);font-weight:300;font-size:clamp(18px,1.8vw,21px);line-height:1.55;max-width:56rem;margin:0;text-wrap:pretty">Most of my work so far asks how what happens around us shapes what happens in our heads: what we perceive, how we react to a threat, what we believe about others. I've studied these questions through behavior and self-report. Next, I want to study them in the brain.</p>
+  </div>
+</section>
+
+<sc-if value="{{ showFeatured }}" hint-placeholder-val="{{ false }}">
+<section data-screen-label="Research · Featured work" style="padding:0 0 clamp(40px,6vw,64px)">
+  <div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
+    <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 14px">Featured work</p>
+    <a href="writing.html" style="display:flex;flex-wrap:wrap;gap:20px 32px;align-items:center;text-decoration:none;color:var(--ink);background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:clamp(20px,3vw,28px)" style-hover="border-color:var(--accent-2)">
+      <div style="flex:0 0 200px;aspect-ratio:16/10;border-radius:10px;background:var(--band);display:flex;align-items:center;justify-content:center;font-size:14px;color:var(--ink-3)">[TODO: thumbnail]</div>
+      <div style="flex:1 1 320px;min-width:0;display:flex;flex-direction:column;gap:8px">
+        <span style="align-self:flex-start;font:700 12px/1 'Source Sans 3',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);border-radius:999px;padding:5px 10px">Notebook · Video · Dataset · Post</span>
+        <h3 style="font-family:var(--serif);font-weight:400;font-size:26px;line-height:1.2;margin:0">[TODO: title]</h3>
+        <p style="margin:0;color:var(--ink-2);font-size:17px">[TODO: one sentence on what it shows and why it's worth a look]</p>
+      </div>
+    </a>
+  </div>
+</section>
+</sc-if>
+
+<section data-screen-label="Research · Projects" style="padding:0 0 clamp(56px,8vw,96px)">
+  <div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
+
+    <article id="perception" style="scroll-margin-top:84px;display:flex;flex-wrap:wrap;gap:12px clamp(28px,5vw,56px);padding:clamp(32px,5vw,48px) 0;border-top:1px solid var(--line)">
+      <div style="flex:0 1 220px;display:flex;flex-direction:column;gap:4px">
+        <span style="font-size:16px;font-weight:700;color:var(--accent-2)">2026 – now</span>
+        <span style="font-size:15px;color:var(--ink-3)">Graduate Research Assistant<br>Computational Psychology Lab, <br>Technical University Berlin</span>
+      </div>
+      <div style="flex:1 1 460px;min-width:0;max-width:680px">
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:0 0 16px;text-wrap:balance">Visual Completion Phenomena</h2>
+        <p style="margin:0 0 14px;text-wrap:pretty">Do perceptual completion effects found under controlled laboratory conditions still hold in real-world settings? In Prof. Marianne Maertens's group, which studies visual perception through psychophysical experiments and computational modeling, I assist on two experiments on visual completion, specifically amodal completion of occluded surfaces. I collect behavioral data in real-world experimental setups and contribute to data processing and analysis in Python and R, using Git for version control.</p>
+        <p style="margin:0;color:var(--ink-2);text-wrap:pretty"></p>
+      </div>
+    </article>
+
+    <article id="masculinity" style="scroll-margin-top:84px;display:flex;flex-wrap:wrap;gap:12px clamp(28px,5vw,56px);padding:clamp(32px,5vw,48px) 0;border-top:1px solid var(--line)">
+      <div style="flex:0 1 220px;display:flex;flex-direction:column;gap:14px">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <span style="font-size:16px;font-weight:700;color:var(--accent-2)">December 2024</span>
+          <span style="font-size:15px;color:var(--ink-3)">Poster · 5th National Social Psychology Conference, Ankara<br></span>
+        </div>
+      </div>
+      <div style="flex:1 1 460px;min-width:0;max-width:680px">
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:0 0 16px;text-wrap:balance">Threatened Masculinity: An Examination of Sexist and Objectifying Attitudes</h2>
+        <p style="margin:0 0 14px;text-wrap:pretty">Does a threat to men's sense of masculinity make them more likely to hold sexist and objectifying attitudes toward women? I proposed this sub-study within Dr. Ece Akça-Doğan's TÜBİTAK 1002-A project, designed the masculinity-threat manipulation, collected data from 96 participants and ran the analyses.</p>
+        <p style="margin:0 0 14px;color:var(--ink-2);text-wrap:pretty">Although the manipulation check suggested the threat had worked, we found no evidence that it increased sexist or objectifying attitudes.</p>
+        
+        <div style="display:flex;flex-wrap:wrap;gap:10px">
+          <a href="https://independent.academia.edu/AyseSahin240" target="_blank" rel="noopener" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--bg-2);background:var(--accent-2);padding:10px 18px;border-radius:8px" style-hover="background:var(--accent);color:var(--bg-2)">View poster ↗</a>
+          <a href="https://sosyalpsikoloji.org/wp-content/uploads/2026/06/SPKV_BildiriKitapcigi-1-6.pdf#page=176" target="_blank" rel="noopener" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--accent-2);border:1px solid var(--accent-2);padding:10px 18px;border-radius:8px" style-hover="background:var(--bg-2)">View abstract (p. 176) ↗</a>
+        </div>
+      </div>
+    </article>
+
+    
+
+    <article id="narrative" style="scroll-margin-top:84px;display:flex;flex-wrap:wrap;gap:12px clamp(28px,5vw,56px);padding:clamp(32px,5vw,48px) 0;border-top:1px solid var(--line)">
+      <div style="flex:0 1 220px;display:flex;flex-direction:column;gap:4px">
+        <span style="font-size:16px;font-weight:700;color:var(--accent-2)">2024</span>
+        <span style="font-size:15px;color:var(--ink-3)">Erasmus+ Traineeship<br>Autonomous University of Barcelona, Spain</span>
+      </div>
+      <div style="flex:1 1 460px;min-width:0;max-width:680px">
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:0 0 16px;text-wrap:balance">Disability, Reproduction &amp; Narrative</h2>
+        <p style="margin:0;text-wrap:pretty">How do women with disabilities talk about their reproductive choices? I applied narrative analysis to their accounts, coding and mapping themes in ATLAS.ti.</p>
+      </div>
+    </article>
+
+    <article id="immune" style="scroll-margin-top:84px;display:flex;flex-wrap:wrap;gap:12px clamp(28px,5vw,56px);padding:clamp(32px,5vw,48px) 0;border-top:1px solid var(--line)">
+      <div style="flex:0 1 220px;display:flex;flex-direction:column;gap:4px">
+        <span style="font-size:16px;font-weight:700;color:var(--accent-2)">2022 – 23</span>
+        <span style="font-size:15px;color:var(--ink-3)">Research Assistant, STAR Scholarship<br>Ege Evolutionary Psychology Lab</span>
+      </div>
+      <div style="flex:1 1 460px;min-width:0;max-width:680px">
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:0 0 16px;text-wrap:balance">The Behavioral Immune System</h2>
+        <p style="margin:0 0 14px;text-wrap:pretty">What are the social consequences of the behavioral immune system, the reactions that steer us away from possible sources of disease, and do genes moderate it? For this TÜBİTAK project, I collected behavioral data from 100+ participants, and coordinated with a molecular microbiology team handling saliva samples for DNA analysis. </p>
+        <p style="margin:0;color:var(--ink-2);text-wrap:pretty">Seeing behavioral data paired with genetic data was what first made me curious about measuring the mind beyond what people do and say.</p>
+      </div>
+    </article>
+
+    <article id="kule" style="scroll-margin-top:84px;display:flex;flex-wrap:wrap;gap:12px clamp(28px,5vw,56px);padding:clamp(32px,5vw,48px) 0;border-top:1px solid var(--line)">
+      <div style="flex:0 1 220px;display:flex;flex-direction:column;gap:4px">
+        <span style="font-size:16px;font-weight:700;color:var(--accent-2)">2022</span>
+        <span style="font-size:15px;color:var(--ink-3)">Volunteer Research Assistant<br>TÜBİTAK field study, Izmir</span>
+      </div>
+      <div style="flex:1 1 460px;min-width:0;max-width:680px">
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(26px,3vw,34px);line-height:1.15;margin:0 0 16px;text-wrap:balance">KULE: Families, Schools &amp; Early Childhood</h2>
+        <p style="margin:0;text-wrap:pretty">How do interactions between families and schools shape preschool children's development? As a volunteer research assistant, I interviewed children aged 4–6 and surveyed their parents and teachers by phone, cleaned and prepared data for analysis.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section data-screen-label="Research · Teaching" style="background:var(--band);padding:clamp(48px,7vw,80px) 0">
+  <div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px);display:flex;flex-wrap:wrap;gap:12px clamp(28px,5vw,56px)">
+    <div style="flex:0 1 220px">
+      <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin:0 0 12px">Teaching</p>
+      <span style="font-size:15px;color:var(--ink-3)">2024 · Ege University</span>
+    </div>
+    <div style="flex:1 1 460px;min-width:0;max-width:680px">
+      <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(24px,2.8vw,30px);line-height:1.2;margin:0 0 12px">Teaching Assistant · Experimental Psychology</h2>
+      <p style="margin:0;color:var(--ink-2);text-wrap:pretty">I mentored second-year students as they developed research proposals, designed experiments and chose appropriate statistical methods. I also supervised in-lab data collection with live participants and reviewed students' lab reports.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<dc-import name="footer" hint-size="100%,480px"></dc-import>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;showFeatured&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Content&quot;}}">
+class Component extends DCLogic {
+  renderVals() { return { showFeatured: this.props.showFeatured ?? false }; }
+}
+</script>
+</body>
+</html>

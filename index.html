@@ -8,499 +8,179 @@
 <body>
 <x-dc>
 <helmet>
+<title>Ayşe Şahin · Cognitive Science</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('as-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
-  :root{
-    --paper:#fae5c4;
-    --paper-2:#fef4e3;
-    --sage:#f6c893;
-    --sage-2:#f0bb80;
-    --ink:#34221a;
-    --ink-soft:#6a5038;
-    --ink-faint:#a6855f;
-    --green:#ec3b78;
-    --green-deep:#c92259;
-    --clay:#e21d5e;
-    --clay-deep:#b3164a;
-    --line:rgba(52,34,26,.15);
-    --max:1080px;
-    --nav-size:17px;
-  }
-  *{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{
-    background:var(--paper);color:var(--ink);
-    font-family:'Hanken Grotesk',system-ui,sans-serif;font-size:18px;line-height:1.65;
-    -webkit-font-smoothing:antialiased;overflow-x:hidden;
-  }
-  ::selection{background:var(--clay);color:var(--paper-2)}
-
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 32px}
-  canvas[data-neural]{position:absolute;inset:0;width:100%;height:100%;z-index:0;display:block;pointer-events:none}
-
-  section{padding:clamp(72px,13vh,150px) 0;position:relative}
-  .sage{background:var(--sage)}
-  .sec-tag{font-family:'Hanken Grotesk',sans-serif;font-size:12.5px;font-weight:600;
-           letter-spacing:.22em;text-transform:uppercase;color:var(--clay);
-           display:flex;align-items:center;gap:13px;margin-bottom:24px}
-  .sec-tag .n{color:var(--ink-faint);font-weight:500}
-  h2{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(34px,5.2vw,60px);
-     line-height:1.02;letter-spacing:-.01em;color:var(--ink)}
-  h2 em{font-style:italic;color:var(--green)}
-  h3{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(21px,2.4vw,27px);
-     line-height:1.2;color:var(--ink)}
-  p{text-wrap:pretty}
-  a{color:var(--clay-deep)}
-  .mono-faint{color:var(--ink-faint)}
-
-  /* ---------- HERO ---------- */
-  .hero{min-height:100vh;display:flex;align-items:center;padding:96px 0 48px;position:relative;overflow:hidden}
-  .hero .wrap{position:relative;z-index:2;width:100%}
-  .hero-grid{display:grid;grid-template-columns:1.3fr .8fr;gap:clamp(36px,6vw,80px);align-items:center}
-  .hero .sec-tag{margin-bottom:22px;font-size:13px}
-  .hero h1{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(58px,8.4vw,104px);
-           line-height:.95;letter-spacing:-.02em;margin-bottom:26px}
-  .hero h1 em{font-style:italic;color:var(--green)}
-  .hero .lede{font-size:clamp(21px,2.3vw,27px);color:var(--ink-soft);max-width:36ch;line-height:1.5;margin-bottom:30px}
-  .hero .role{font-size:19.5px;color:var(--ink-faint);line-height:1.8}
-  .avail{display:inline-flex;align-items:center;gap:9px;margin-top:26px;font-size:17px;color:var(--ink-soft);
-         border:1px solid var(--line);padding:10px 19px;border-radius:30px;background:rgba(251,249,243,.6)}
-  .avail b{width:7px;height:7px;border-radius:50%;background:var(--green);display:inline-block}
-  .hero-photo{position:relative;justify-self:stretch;width:100%;height:580px;
-              --l:326px;--m:218px;--s:144px}
-  .pf{position:absolute;border-radius:50%;overflow:hidden;transform:translate(-50%,-50%);
-      border:2px solid #e21d5e;box-shadow:0 24px 52px -24px rgba(40,14,8,.62);
-      cursor:pointer;background:var(--sage);
-      transition:width .55s cubic-bezier(.4,.85,.3,1),height .55s cubic-bezier(.4,.85,.3,1),box-shadow .35s}
-  .pf:hover{box-shadow:0 30px 64px -22px rgba(40,14,8,.7)}
-  .pf img{width:100%;height:100%;object-fit:cover;display:block}
-  .pf[data-rank="0"]{width:var(--l);height:var(--l);z-index:3}
-  .pf[data-rank="1"]{width:var(--m);height:var(--m);z-index:2}
-  .pf[data-rank="2"]{width:var(--s);height:var(--s);z-index:1}
-  .pf-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
-         gap:4px;color:var(--clay-deep);text-align:center;line-height:1.2;
-         background:repeating-conic-gradient(rgba(255,249,238,.35) 0deg 12deg, transparent 12deg 24deg), var(--sage)}
-  .pf-ph .plus{font-size:26px;font-weight:300;font-family:'Fraunces',serif}
-  .pf-ph .t{font-size:10.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
-
-  /* ---------- ABOUT ---------- */
-  .about-grid{display:grid;grid-template-columns:.7fr 1.3fr;gap:clamp(30px,5vw,70px);align-items:start}
-  .about-body p{font-size:clamp(15px,1.5vw,19px);line-height:1.65;color:var(--ink-soft);margin-bottom:18px}
-  .about-body p:first-child{font-family:'Fraunces',serif;font-weight:300;font-size:clamp(21px,2.3vw,27px);
-                            line-height:1.4;color:var(--ink)}
-  .about-body em{font-style:italic;color:var(--green);font-family:'Fraunces',serif}
-  .tags{margin-top:22px;display:flex;flex-wrap:wrap;gap:9px}
-  .tags span{font-size:13px;letter-spacing:.01em;border:1px solid var(--line);color:var(--ink-soft);
-             padding:7px 14px;border-radius:30px;background:var(--paper-2)}
-
-  /* ---------- RESEARCH ---------- */
-  .rlist{display:grid;gap:0;margin-top:8px}
-  .proj{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:30px 0;
-        border-top:1px solid var(--line);align-items:start}
-  .proj:first-child{border-top:none}
-  .proj .when{font-size:13.5px;color:var(--clay-deep);font-weight:600;letter-spacing:.02em;padding-top:5px}
-  .proj .where{font-size:13.5px;color:var(--ink-faint);line-height:1.6;margin:9px 0 13px}
-  .proj .desc{color:var(--ink-soft);font-size:16.5px;max-width:680px;line-height:1.62}
-  .proj .desc em{color:var(--green);font-style:italic;font-family:'Fraunces',serif}
-  .substudy{margin-top:18px;background:var(--paper-2);border:1px solid var(--line);border-left:3px solid var(--green);
-            border-radius:0 8px 8px 0;padding:18px 22px;max-width:680px}
-  .substudy .lbl{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--green-deep);
-                 font-weight:600;margin-bottom:8px}
-  .substudy .t{font-family:'Fraunces',serif;font-style:italic;font-size:18.5px;color:var(--ink);margin-bottom:8px;line-height:1.25}
-  .substudy .m{font-size:14px;color:var(--ink-soft);line-height:1.55;margin-bottom:9px}
-  .substudy a{font-size:13.5px;color:var(--green-deep);text-decoration:none;border-bottom:1px solid rgba(226,29,94,.4);font-weight:500}
-
-  /* ---------- CV ---------- */
-  .cv-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,60px);margin-top:8px}
-  .cv-block{margin-bottom:30px}
-  .cv-block .bh{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--clay-deep);
-                font-weight:600;margin-bottom:16px;padding-bottom:10px;border-bottom:1px solid var(--line)}
-  .cv-item{display:flex;justify-content:space-between;gap:16px;margin-bottom:15px;align-items:baseline}
-  .cv-item .what{font-weight:600;color:var(--ink);font-size:16.5px;display:block}
-  .cv-item .where2{color:var(--ink-faint);font-size:14px}
-  .cv-item .when{font-size:12.5px;color:var(--clay-deep);font-weight:500;white-space:nowrap}
-  .cv-text{color:var(--ink-soft);font-size:15.5px;line-height:1.7}
-  .cv-text b{color:var(--ink);font-weight:600}
-  .cv-dl{display:inline-flex;align-items:center;gap:8px;margin-top:12px;font-size:14px;font-weight:500;
-         text-decoration:none;color:var(--paper-2);background:var(--green);padding:12px 22px;border-radius:6px;transition:background .2s}
-  .cv-dl:hover{background:var(--green-deep)}
-
-  /* ---------- BEYOND ---------- */
-  .blist{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:8px}
-  .bcard{background:var(--paper-2);border:1px solid var(--line);border-radius:12px;padding:26px;
-         transition:border-color .25s,transform .25s}
-  .bcard:hover{border-color:rgba(176,106,79,.5);transform:translateY(-3px)}
-  .bcard .bd{font-size:12.5px;color:var(--clay-deep);font-weight:600;letter-spacing:.04em;margin-bottom:11px}
-  .bcard .bw{font-family:'Fraunces',serif;font-style:italic;color:var(--ink-faint);font-size:15.5px;display:block;margin:5px 0 10px}
-  .bcard p{font-size:15px;color:var(--ink-soft);line-height:1.55}
-
-  /* ---------- CONTACT ---------- */
-  .contact{text-align:center;overflow:hidden;position:relative;min-height:100vh;
-           display:flex;flex-direction:column;justify-content:center}
-  .contact .wrap{position:relative;z-index:2}
-  .contact h2{font-size:clamp(40px,7.5vw,86px);margin-bottom:18px}
-  .contact .intro{max-width:520px;margin:0 auto 32px}
-  .clinks{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
-  .clinks a{font-size:14.5px;font-weight:500;text-decoration:none;color:var(--ink);border:1px solid var(--line);
-            padding:13px 22px;border-radius:30px;transition:all .25s;display:inline-flex;gap:9px;align-items:center;background:var(--paper-2)}
-  .clinks a:hover{border-color:var(--green);background:var(--green);color:var(--paper-2)}
-  footer{text-align:center;padding:16px 32px;color:var(--ink-faint);font-size:13px;letter-spacing:.04em;background:rgba(250,229,196,.9)}
-
-  /* nav */
-  .topnav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;justify-content:center;
-          padding:14px 0;transition:background .3s,box-shadow .3s}
-  .topnav.solid{background:rgba(250,229,196,.9);backdrop-filter:blur(10px);box-shadow:0 1px 0 var(--line)}
-  .topnav nav{display:flex;gap:6px;align-items:center}
-  .topnav a{font-size:var(--nav-size,15px);font-weight:600;color:var(--ink-soft);text-decoration:none;padding:9px 16px;
-            border-radius:30px;transition:color .2s,background .2s;letter-spacing:.01em}
-  .topnav a:hover{color:var(--ink);background:rgba(59,58,50,.06)}
-  .topnav a.on{color:#e21d5e}
-  .topnav.solid a{color:var(--ink-soft);text-shadow:none}
-  .topnav.solid a:hover{color:var(--ink);background:rgba(59,58,50,.06)}
-  .topnav.solid a.on{color:#e21d5e}
-
-  .hamburger{display:none;flex-direction:column;gap:5px;width:38px;height:38px;align-items:center;justify-content:center;
-              border:1px solid var(--sage-2);border-radius:10px;background:var(--sage);cursor:pointer;
-              position:fixed;top:14px;right:22px;z-index:50}
-  .hamburger span{display:block;width:20px;height:2px;background:var(--clay);border-radius:2px;transition:transform .25s,opacity .25s}
-  .topnav.open .hamburger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
-  .topnav.open .hamburger span:nth-child(2){opacity:0}
-  .topnav.open .hamburger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
-
-  /* back to top */
-  .totop{position:fixed;right:clamp(18px,3vw,34px);bottom:clamp(18px,3vw,34px);z-index:45;
-         width:46px;height:46px;border-radius:50%;border:1px solid var(--line);cursor:pointer;
-         background:rgba(251,249,243,.9);backdrop-filter:blur(8px);color:var(--ink);
-         font-size:19px;line-height:1;display:flex;align-items:center;justify-content:center;
-         box-shadow:0 8px 22px -12px rgba(59,58,50,.45);
-         opacity:0;transform:translateY(10px);pointer-events:none;
-         transition:opacity .3s,transform .3s,background .2s,border-color .2s}
-  .totop.show{opacity:1;transform:none;pointer-events:auto}
-  .totop:hover{background:var(--green);border-color:var(--green);color:var(--paper-2)}
-
-  /* reveal — opacity always 1, transform only */
-  .reveal{opacity:1}
-  .js-anim .reveal{transform:translateY(18px);transition:transform .8s cubic-bezier(.2,.75,.25,1)}
-  .js-anim .reveal.in{transform:none}
-  .reveal.d2{transition-delay:.08s}.reveal.d3{transition-delay:.16s}.reveal.d4{transition-delay:.24s}
-  @media(prefers-reduced-motion:reduce){.js-anim .reveal{transform:none;transition:none}}
-
-  @media(max-width:820px){
-    .topnav{display:block;justify-content:flex-end;padding:0}
-    .hamburger{display:flex}
-    .topnav nav{position:fixed;top:0;right:0;height:100vh;width:min(78vw,300px);
-                background:rgba(250,229,196,.98);backdrop-filter:blur(10px);flex-direction:column;
-                align-items:flex-start;justify-content:center;gap:4px;padding:28px;
-                transform:translateX(100%);transition:transform .3s;box-shadow:-4px 0 24px rgba(0,0,0,.08)}
-    .topnav.open nav{transform:translateX(0)}
-    .topnav nav a{width:100%;padding:14px 16px;font-size:17px}
-    .hero{min-height:auto;padding:64px 0 56px}
-    .hero-grid,.about-grid{grid-template-columns:1fr;gap:32px}
-    .hero-photo{order:-1;justify-self:center;height:360px;--l:220px;--m:150px;--s:100px}
-    .cv-grid,.blist{grid-template-columns:1fr;gap:18px}
-    .proj{grid-template-columns:1fr;gap:6px}
-    .proj .when{padding-top:0}
-    .wrap{padding:0 22px}
-    .intro{width:auto !important;max-width:100% !important;height:auto !important}
-    .contact h2{font-size:40px !important}
-    .contact{min-height:auto;overflow:visible;padding:64px 0 56px}
-    .contact h2{white-space:normal !important}
-    .clinks a{font-size:13.5px;padding:11px 16px}
-  }
+:root{--serif:'Fraunces',serif;--bg:#fcedd6;--bg-2:#fff8ed;--band:#f9dfbb;--ink:#34221a;--ink-2:#5a4230;--ink-3:#73563a;--accent:#e21d5e;--accent-2:#b3164a;--line:rgba(52,34,26,.16);--todo:#fff3c4;--todo-ink:#7a4d00;color-scheme:light}
+:root[data-theme=dark]{--bg:#1b1310;--bg-2:#261b16;--band:#2c1f19;--ink:#f6e7d2;--ink-2:#dcc6aa;--ink-3:#b59c80;--accent:#ff5c8f;--accent-2:#ff86ac;--line:rgba(246,231,210,.16);--todo:#3b2d10;--todo-ink:#f3c76a;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1b1310;--bg-2:#261b16;--band:#2c1f19;--ink:#f6e7d2;--ink-2:#dcc6aa;--ink-3:#b59c80;--accent:#ff5c8f;--accent-2:#ff86ac;--line:rgba(246,231,210,.16);--todo:#3b2d10;--todo-ink:#f3c76a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:var(--accent-2)}a:hover{color:var(--accent)}
+::selection{background:var(--accent);color:#fff}
+[data-m-fluid]{max-width:100%!important}
+@media (max-width:1100px){[data-m-fluid]{width:auto!important;height:auto!important}}
 </style>
 <script src="assets/neural.js"></script>
 </helmet>
 
-<div class="topnav" id="topnav">
-  <button class="hamburger" id="hamburger" type="button" aria-label="Menu" aria-expanded="false">
-    <span></span><span></span><span></span>
-  </button>
-  <nav>
-    <a href="#about" data-to="about">About</a>
-    <a href="#research" data-to="research">Research</a>
-    <a href="#cv" data-to="cv">Background</a>
-    <a href="#beyond" data-to="beyond">Beyond</a>
-    <a href="#contact" data-to="contact">Contact</a>
-  </nav>
-</div>
+<dc-import name="nav" current="home" hint-size="100%,64px" style="position:fixed;top:0;left:0;right:0;z-index:40;display:block"></dc-import>
+<div aria-hidden="true" style="height:64px"></div>
 
-<section class="hero" id="about" data-screen-label="Hero">
-  <canvas data-neural="" data-node="rgba(226,29,94,.6)" data-line="rgba(226,29,94,.2)" data-count="18" data-link="230" data-dot="2.4"></canvas>
-  <div class="wrap">
-    <div class="hero-card">
-    <div class="hero-grid">
+<main>
+<section data-screen-label="Home · Hero" style="position:relative;overflow:hidden;padding:clamp(48px,8vw,104px) 0 clamp(56px,8vw,96px)">
+  <canvas data-neural="" data-node="rgba(226,29,94,.5)" data-line="rgba(226,29,94,.16)" data-count="16" data-link="220" data-dot="2.2" style="position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none"></canvas>
+  <div style="position:relative;max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px);display:flex;flex-wrap:wrap-reverse;align-items:center;gap:clamp(36px,6vw,72px)">
+    <div style="flex:1 1 440px;min-width:0">
+      <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin:0 0 20px">Cognitive Science · Berlin</p>
+      <h1 style="font-family:var(--serif);font-weight:400;font-size:clamp(52px,8.4vw,100px);line-height:.95;letter-spacing:-.025em;color:var(--accent);margin:0 0 22px">Ayşe Şahin</h1>
+      <p style="font-family:var(--serif);font-weight:300;font-size:clamp(22px,2.6vw,29px);line-height:1.35;color:var(--ink);max-width:28ch;margin:0 0 24px;text-wrap:pretty">An experimental psychologist moving into cognitive neuroscience.</p>
+      <div style="display:flex;flex-direction:column;gap:2px;font-size:17px;color:var(--ink-2);margin:0 0 26px">
+        <span>MSc Cognitive Science, University of Potsdam</span>
+        <span>Research Assistant, Computational Psychology Lab, TU Berlin</span>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 22px;font-size:17px;font-weight:600">
+        <a href="mailto:psk.aysesahin@gmail.com" style="color:var(--accent-2)">Email</a>
+        <a href="https://www.linkedin.com/in/aysesahin24/" target="_blank" rel="noopener" style="color:var(--accent-2)">LinkedIn</a>
+        <a href="https://independent.academia.edu/AyseSahin240" target="_blank" rel="noopener" style="color:var(--accent-2)">Academia</a>
+        <a href="cv.html" style="color:var(--accent-2)">CV</a>
+      </div>
+    </div>
+    <div data-pf-stage="" style="flex:0 1 480px;margin:0 auto;position:relative;width:min(100%,480px);aspect-ratio:480/580">
+      <div data-pf="2" style="transition:width .55s cubic-bezier(.4,.85,.3,1),box-shadow .35s;cursor:pointer;position:absolute;top:13%;left:52%;width:30%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:1;border-radius:50%;overflow:hidden;border:2px solid var(--accent);background:var(--band);box-shadow:0 24px 52px -24px rgba(40,14,8,.62)">
+        <img src="assets/eeg.png" alt="Ayşe Şahin wearing an EEG cap" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div data-pf="1" style="transition:width .55s cubic-bezier(.4,.85,.3,1),box-shadow .35s;cursor:pointer;position:absolute;top:32%;left:79%;width:45.4%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:2;border-radius:50%;overflow:hidden;border:2px solid var(--accent);background:var(--band);box-shadow:0 24px 52px -24px rgba(40,14,8,.62)">
+        <img src="assets/poster.png" alt="Ayşe Şahin presenting a research poster" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+      <div data-pf="0" style="transition:width .55s cubic-bezier(.4,.85,.3,1),box-shadow .35s;cursor:pointer;position:absolute;top:58%;left:42%;width:68%;aspect-ratio:1;transform:translate(-50%,-50%);z-index:3;border-radius:50%;overflow:hidden;border:2px solid var(--accent);background:var(--band);box-shadow:0 24px 52px -24px rgba(40,14,8,.62)">
+        <img src="assets/portrait.jpg" alt="Portrait of Ayşe Şahin" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Home · Curious" style="background:var(--band);padding:clamp(56px,9vw,104px) 0">
+  <div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
+    <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin:0 0 16px">Questions</p>
+    <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,52px);line-height:1.05;letter-spacing:-.01em;margin:0 0 12px">What I'm <em style="color:var(--accent-2);font-style:normal">curious</em> about</h2>
+    <p data-m-fluid="" style="font-size: clamp(18px,1.8vw,20px); line-height: 1.5; color: var(--ink-2); margin: 0 0 clamp(32px,5vw,48px); width: 998px; height: 8px">From behavior, to the brain, to technology.</p>
+    <ol style="list-style:none;margin:0;padding:0;display:grid;gap:0;border-bottom:1px solid var(--line)">
+      <li data-m-fluid="" style="display: flex; gap: clamp(16px,3vw,32px); align-items: baseline; padding: 24px 0; border-top: 1px solid var(--line); width: 996px; height: 136px">
+        <span style="font-family:var(--serif);font-size:22px;color:var(--accent-2);flex:none;width:28px">1</span>
+        <div style="display:flex;flex-direction:column;gap:10px;min-width:0;max-width:720px">
+        <h3 style="margin: 0; font-family: var(--serif); font-style: normal; font-weight: 400; font-size: clamp(22px,2.2vw,26px); line-height: 1.25; color: var(--ink); text-wrap: balance">How do hidden internal states shape social behavior?</h3>
+        <p data-m-fluid="" style="margin: 0; font-size: 17px; line-height: 1.6; color: var(--ink-2); text-wrap: pretty; width: 897px; height: 54px">Much of my early research looked at how people respond to threat, from threatened masculinity to disease avoidance. I'm still drawn to how states we can't directly observe, like threat, disgust or exclusion, steer what people think and do toward others.</p>
+        </div>
+      </li>
+      <li data-m-fluid="" style="display: flex; gap: clamp(16px,3vw,32px); align-items: baseline; padding: 24px 0; border-top: 1px solid var(--line); width: 998px; height: 139px">
+        <span style="font-family:var(--serif);font-size:22px;color:var(--accent-2);flex:none;width:28px">2</span>
+        <div style="display:flex;flex-direction:column;gap:10px;min-width:0;max-width:720px">
+        <h3 style="margin: 0; font-family: var(--serif); font-style: normal; font-weight: 400; font-size: clamp(22px,2.2vw,26px); line-height: 1.25; color: var(--ink); text-wrap: balance">Can we see those states in the brain?</h3>
+        <p data-m-fluid="" style="margin: 0; font-size: 17px; line-height: 1.6; color: var(--ink-2); text-wrap: pretty; width: 890px; height: 63px">Questionnaires only capture what people are willing and able to tell us. I want to know what EEG, which is cheap and portable but noisy, can reveal about states like threat, attention or emotion, and where its limits are.</p>
+        </div>
+      </li>
+      <li data-m-fluid="" style="display: flex; gap: clamp(16px,3vw,32px); align-items: baseline; padding: 24px 0; border-top: 1px solid var(--line); width: 999px; height: 139px">
+        <span style="font-family:var(--serif);font-size:22px;color:var(--accent-2);flex:none;width:28px">3</span>
+        <div style="display:flex;flex-direction:column;gap:10px;min-width:0;max-width:720px">
+        <h3 style="margin: 0; font-family: var(--serif); font-style: normal; font-weight: 400; font-size: clamp(22px,2.2vw,26px); line-height: 1.25; color: var(--ink); text-wrap: balance">Could technology respond to them?</h3>
+        <p data-m-fluid="" style="margin: 0; font-size: 17px; line-height: 1.6; color: var(--ink-2); text-wrap: pretty; width: 890px; height: 71px">Most brain–computer interfaces translate deliberate commands, like imagining a movement. I'm curious about systems that could instead pick up on internal states such as attention or stress, and what it would take to make them reliable.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section data-screen-label="Home · About" style="padding:clamp(56px,9vw,104px) 0">
+  <div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px);display:flex;flex-wrap:wrap;gap:24px clamp(32px,6vw,80px)">
+    <div style="flex:1 1 260px">
+      <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin:0 0 16px">About</p>
+      <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,52px);line-height:1.05;letter-spacing:-.01em;margin:0">Between mind<br>&amp; <em style="color:var(--accent-2);font-style:normal">brain</em></h2>
+    </div>
+    <div style="flex:2 1 460px;min-width:0;max-width:640px">
+      <p style="font-family:var(--serif);font-weight:300;font-size:clamp(21px,2.2vw,25px);line-height:1.45;margin:0 0 18px;text-wrap:pretty">I studied psychology in Türkiye and spent much of my degree working in experimental labs, with a research traineeship in Barcelona and an exchange semester in the Netherlands along the way.</p>
+      <p style="margin:0 0 16px;color:var(--ink-2);text-wrap:pretty">I’m now doing an MSc in Cognitive Science at the University of Potsdam and work as a research assistant in Prof. Marianne Maertens’s Computational Psychology Lab at TU Berlin, on psychophysics and computational models of visual perception.</p>
+      <p data-m-fluid="" style="margin: 0; color: var(--ink-2); text-wrap: pretty; width: 601px; height: 78px">Over time, my interests have moved from social psychology toward the brain and neurotechnology, especially EEG and brain–computer interfaces. What has stayed the same is my curiosity about the states people can’t directly see. I’m using this phase to turn my questions into a research project worth committing to.</p>
+    </div>
+  </div>
+</section>
+
+<section data-screen-label="Home · Now" style="padding:0 0 clamp(56px,9vw,104px)">
+  
+<div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
+    <div style="border:1px solid var(--line);border-radius:14px;background:var(--bg-2);padding:clamp(24px,4vw,40px);display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;padding-bottom:20px;border-bottom:1px solid var(--line)">
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:36px;line-height:1;margin:0"><em style="color:var(--accent-2);font-style:normal">Now</em></h2>
+        <p style="margin:0;font-size:15px;color:var(--ink-3)">Updated November 2026</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:24px clamp(24px,4vw,48px)">
+      <div style="min-width:0">
+        <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px">Working on</p>
+        <p style="margin:0;text-wrap:pretty">My PhD applications, and getting hands-on with EEG analysis in MNE-Python.</p>
+      </div>
+      <div style="min-width:0">
+        <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px">Learning</p>
+        <p style="margin:0;text-wrap:pretty">Neuroscience fundamentals through HarvardX, and German.</p>
+      </div>
+      <div style="min-width:0">
+        <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-3);margin:0 0 10px">Reading</p>
+        <p style="margin:0;text-wrap:pretty"><em>Mother Mary Comes to Me</em> by Arundhati Roy.</p>
+      </div>
+      </div>
+    </div>
+  </div></section>
+
+<section data-screen-label="Home · Selected work" style="background:var(--band);padding:clamp(56px,9vw,104px) 0">
+  <div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin:0 0 32px">
       <div>
-        <p class="sec-tag reveal">Cognitive Science · Berlin</p>
-        <h1 class="reveal d2" style="color: #E21D5E; font-weight: 400; font-style: normal; text-decoration-line: none; text-transform: capitalize; overflow: visible">Ayşe Şahin</h1>
-        <p class="lede reveal d3">An experimental psychologist moving into cognitive neuroscience.</p>
-        <p class="role reveal d3">M.Sc. Cognitive Science | University of Potsdam<br>Research Assistant | Computational Psychology Lab, TU Berlin</p>
-        <div class="reveal d4"><span class="avail" style="text-align: left; border-radius: 10px"><b></b> Seeking a PhD-track lab in cognitive neuroscience</span></div>
+        <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin:0 0 16px">Research</p>
+        <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(32px,5vw,52px);line-height:1.05;letter-spacing:-.01em;margin:0">Selected <em style="color:var(--accent-2);font-style:normal">work</em></h2>
       </div>
-      <div class="hero-photo reveal d2">
-        <div class="pf" data-rank="0" style="top:58%;left:42%"><img src="photo.jpg" alt="Ayşe Şahin"></div>
-        <div class="pf" data-rank="1" style="top:32%;left:79%"><img src="assets/poster.png" alt="Ayşe Şahin presenting a research poster"></div>
-        <div class="pf" data-rank="2" style="top:13%;left:52%">
-          <img src="assets/eeg.png" alt="Ayşe Şahin wearing an EEG cap">
-        </div>
-      </div>
+      <a href="research.html" style="font-size:17px;font-weight:600;color:var(--accent-2)">All research →</a>
     </div>
-    </div>
-  </div>
-</section>
-
-<section class="sage" id="about2" data-screen-label="About">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="reveal">
-        <p class="sec-tag"><span class="n">01</span> About</p>
-        <h2>Between mind<br>&amp; <em>brain</em></h2>
-      </div>
-      <div class="about-body">
-        <p class="reveal">I studied psychology in Türkiye and spent my degree in experimental labs - behavioral studies, survey work, and a stint in qualitative and social psychology research in Spain and the Netherlands. In 2026, I joined Prof. Marianne Maertens’s Computational Psychology Lab at TU Berlin, where I work on psychophysics and computational modeling of visual perception.</p>
-        <p class="reveal d2">My interests have gradually moved from experimental social psychology into cognitive science, converging now on neuroimaging and neurotechnology, EEG and brain–computer interfaces especially.&nbsp;I’m using this phase to find the questions worth committing to.</p>
-        <div class="tags reveal d3">
-          <span>Cognitive psychology</span><span>Neuroimaging</span><span>Brain–computer interfaces</span><span>Perception</span>
-        </div>
-      </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,340px),1fr));gap:18px">
+      <a href="research.html#perception" style="display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--ink);background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,3vw,32px)" style-hover="border-color:var(--accent-2)">
+        <span style="font-size:15px;font-weight:600;color:var(--accent-2)">2026 – now · TU Berlin</span>
+        <h3 style="font-family:var(--serif);font-weight:400;font-size:clamp(23px,2.4vw,28px);line-height:1.2;margin:0">Visual Perception</h3>
+        <p style="margin:0;color:var(--ink-2);font-size:17px;text-wrap:pretty">Do perceptual completion effects found under controlled conditions still hold in real-world settings? I help implement and run the experiments that test this.</p>
+        <span style="margin-top:auto;font-size:16px;font-weight:600;color:var(--accent-2)">Read more →</span>
+      </a>
+      <a href="research.html#masculinity" style="display:flex;flex-direction:column;gap:12px;text-decoration:none;color:var(--ink);background:var(--bg-2);border:1px solid var(--line);border-radius:14px;padding:clamp(22px,3vw,32px)" style-hover="border-color:var(--accent-2)">
+        <span style="font-size:15px;font-weight:600;color:var(--accent-2)">2024 · Poster, Ankara</span>
+        <h3 style="font-family:var(--serif);font-weight:400;font-size:clamp(23px,2.4vw,28px);line-height:1.2;margin:0">Threatened masculinity</h3>
+        <p style="margin:0;color:var(--ink-2);font-size:17px;text-wrap:pretty">Does a threat to men's sense of masculinity make them more likely to hold sexist and objectifying attitudes? My own study, from idea to poster, with 96 participants.</p>
+        <span style="margin-top:auto;font-size:16px;font-weight:600;color:var(--accent-2)">Read more →</span>
+      </a>
     </div>
   </div>
 </section>
+</main>
 
-<section id="research" data-screen-label="Research">
-  <div class="wrap">
-    <div class="reveal" style="margin-bottom:42px">
-      <p class="sec-tag"><span class="n">02</span>research Experience</p>
-      <h2><em>Research</em></h2><p class="intro" style="margin-top: 18px; max-width: 880px; height: 89px; width: 880px">I have been working five years across five domains: vision, social cognition, evolutionary psychology, disability studies, developmental fieldwork. They are different facets of the same craft: designing the study, running the experiment and analyzing the data.</p>
-      
-    </div>
-    <div class="rlist">
-      <div class="proj reveal">
-        <div class="when">2026-now</div>
-        <div>
-          <h3>Visual Perception · Psychophysics</h3>
-          <p class="where">Graduate Research Assistant · Computational Psychology Lab, TU Berlin</p>
-          <p class="desc">I assist with the implementation and execution of various experiments on perceptual completion phenomena, examining whether effects established under controlled conditions persist in naturalistic, real-world settings.</p>
-        </div>
-      </div>
-      <div class="proj reveal">
-        <div class="when">2024</div>
-        <div>
-          <h3>Disability, Reproduction &amp; Narrative</h3>
-          <p class="where">Erasmus+ Traineeship · Social Psychology, UAB Barcelona</p>
-          <p class="desc">Applied narrative analysis to the reproductive choices of women with disabilities. Built proficiency in ATLAS.ti for coding, thematic analysis, and narrative mapping; engaged with critical perspectives on disability and reproduction.</p>
-        </div>
-      </div>
-      <div class="proj reveal">
-        <div class="when">2023-24</div>
-        <div>
-          <h3>The Threat of Gender &amp; Masculinity on Power Relations and Beauty Norms</h3>
-          <p class="where">Research Assistant · TÜBİTAK 1002-A Scholarship · Ege University </p>
-          <p class="desc">Joined Dr. Ece Akça-Doğan's 1002-A project under a scholarship from TÜBİTAK, Turkey’s national science-funding agency. Designed and implemented experiments in SoSci Survey, developed experimental materials, coordinated face-to-face and online data collection, and contributed to cleaning and analyzing quantitative data in SPSS.</p>
-          <div class="substudy" style="border-width: 1px 1px 1px 5px; border-style: solid">
-            <p class="lbl" style="font-size: 13px; font-weight: 600">Independent sub-study &amp; poster</p>
-            <p class="t">Threatened Masculinity: An Examination of Sexist and Objectifying Attitudes</p>
-            <p class="m">Şahin, A. &amp; Akça-Doğan, E. (2024, December). Poster presented at the 5th National Social Psychology Conference, Başkent University, Ankara. Abstract published in the conference proceedings (Yeniçeri, Ed., 2025, p. 176; ISBN 978-625-93507-9-0).</p>
-            <p class="m">I proposed this study within the larger 1002-A project, designed the manipulation, collected the data (N = 96), ran the analysis, and presented it at the 5th National Social Psychology Conference.</p>
-            <a href="https://sosyalpsikoloji.org/wp-content/uploads/2026/06/SPKV_BildiriKitapcigi-1-6.pdf" target="_blank" rel="noopener">View abstract in proceedings (PDF, p. 176) →</a>
-            <a href="https://independent.academia.edu/AyseSahin240" target="_blank" rel="noopener" style="margin-left:14px">View poster on Academia →</a>
-          </div>
-        </div>
-      </div>
-      <div class="proj reveal">
-        <div class="when">2022-23</div>
-        <div>
-          <h3>Behavioral Immune System</h3>
-          <p class="where">Research Assistant · Ege Social &amp; Evolutionary Psychology Lab · STAR Scholarship</p>
-          <p class="desc">Contributed to the TÜBİTAK project <em>Social Consequences and Genetic Moderators of the Behavioral Immune System</em>. Programmed OpenSesame experiments, collected behavioral data from 100+ participants, and coordinated with a molecular microbiology team handling saliva samples for DNA analysis.</p>
-        </div>
-      </div>
-      <div class="proj reveal">
-        <div class="when">2022</div>
-        <div>
-          <h3>KULE Project · Family–School Interactions in Early Childhood</h3>
-          <p class="where">Volunteer Research Assistant · TÜBİTAK field study, Izmir</p>
-          <p class="desc">Contributed to a national TÜBİTAK field study investigating how family and school interactions shape preschool child development. Conducted structured interviews with children aged 4–6, administered phone surveys with parents and teachers, and prepared data for analysis.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sage" id="cv" data-screen-label="CV">
-  <div class="wrap">
-    <div class="reveal" style="margin-bottom:42px">
-      <p class="sec-tag"><span class="n">03</span> Background</p>
-      <h2>Education &amp; <em>Skills</em></h2>
-    </div>
-    <div class="cv-grid">
-      <div>
-        <div class="cv-block reveal">
-          <p class="bh">Education</p>
-          <div class="cv-item"><span><span class="what">M.Sc. Cognitive Science</span><span class="where2">University of Potsdam</span></span><span class="when">2025–now</span></div>
-          <div class="cv-item"><span><span class="what">B.Sc. Psychology, High Honors</span><span class="where2">Ege University · GPA 3.89/4.00 (1.1 German scale, uni-assist)</span></span><span class="when">2019–24</span></div>
-          <div class="cv-item"><span><span class="what">Erasmus Exchange</span><span class="where2">Fontys University of Applied Sciences, NL · 9.0/10 (Dutch scale)</span></span><span class="when">2023</span></div>
-        </div>
-        <div class="cv-block reveal d2">
-          <p class="bh">Scholarships</p>
-          <div class="cv-item"><span><span class="what">TÜBİTAK 1002-A Scholarship</span></span><span class="when">2023–24</span></div>
-          <div class="cv-item"><span><span class="what">TÜBİTAK STAR Scholarship</span></span><span class="when">2022–23</span></div>
-          <div class="cv-item"><span><span class="what">Erasmus+ Traineeship Scholarship</span></span><span class="when">2024</span></div>
-          <div class="cv-item"><span><span class="what">Erasmus+ Exchange Scholarship</span></span><span class="when">2023</span></div>
-        </div>
-      </div>
-      <div>
-        <div class="cv-block reveal">
-          <p class="bh">Training</p>
-          <div class="cv-item" style="align-items:flex-start"><span><span class="what">Mobile Brain–Computer Interface Bootcamp</span><span class="where2">ANT Neuro &amp; University of Potsdam<br>EEG signal processing, ML for BCI, mobile EEG paradigms; hands-on hardware.</span></span><span class="when">May 2026</span></div>
-        </div>
-        <div class="cv-block reveal d2">
-          <p class="bh">Skills</p>
-          <div class="cv-item" style="align-items:flex-start"><span><span class="what">Software</span><span class="where2" style="font-size:16px;color:var(--ink)">· Python · R ·&nbsp;SPSS ·&nbsp;PsychoPy ·&nbsp;OpenSesame · MATLAB <br>· SoSci Survey ·&nbsp;ATLAS.ti</span></span></div>
-          <div class="cv-item" style="align-items:flex-start"><span><span class="what">Methods</span><span class="where2" style="font-size:16px;color:var(--ink)">· Experimental design · Behavioral data collection <br>·&nbsp;Quantitative &amp; qualitative analysis · EEG fundamentals</span></span></div>
-          <div class="cv-item" style="align-items:flex-start"><span><span class="what">Languages</span><span class="where2" style="font-size:16px;color:var(--ink)">· Turkish (native) · English (C1, IELTS 7.5) · German (beginner)</span></span></div>
-        </div>
-      </div>
-    </div>
-    <div style="text-align: center; margin-top: 32px">
-      <a class="cv-dl" href="https://drive.google.com/file/d/1QRYgd66yhxP2wn8kTiGYp2Fy2rFAYURb/view?usp=sharing" target="_blank" rel="noopener" style="padding: 8px 14px; border-radius: 4px; opacity: 0.9; display: inline-block">Download full CV ↓</a>
-    </div>
-  </div>
-</section>
-
-<section id="beyond" data-screen-label="Beyond">
-  <div class="wrap">
-    <div class="reveal" style="margin-bottom:42px">
-      <p class="sec-tag"><span class="n">04</span> Teaching &amp; Service</p>
-      <h2>Teaching &amp; <em>Service</em></h2>
-    </div>
-    <div class="blist">
-      <div class="bcard reveal" style="border-style: none"><p class="bd">2024</p><h3>Teaching Assistant | Experimental Psychology</h3><span class="bw">Ege University</span><p>Mentored sophomore students in designing research proposals, supervised in-lab data collection with live participants, and reviewed lab reports.</p></div>
-      <div class="bcard reveal d2" style="border-style: none"><p class="bd">2023</p><h3>Intern Psychologist</h3><span class="bw">Ministry of Family &amp; Social Services, Türkiye</span><p>Presidential National Internship Program. Provided psychological support to survivors of violence, conducting intake and follow-up interviews and coordinating care with the clinical team.</p></div>
-      <div class="bcard reveal d3" style="border-style: none"><p class="bd">02/2023 – 06/2023</p><h3>Intercultural Adaptation Project</h3><span class="bw">Enter Company, Eindhoven, Netherlands</span><p>Led a team of exchange students to design and deliver three workshops promoting cross-cultural collaboration in an international organization.</p></div>
-      <div class="bcard reveal d4" style="border-style: none"><p class="bd">2021-22</p><h3>Safe Relationships Project</h3><span class="bw">Ministry of Education &amp; Ege University</span><p>Designed and led awareness seminars for high-school students on recognizing psychological violence in romantic relationships.</p></div>
-    </div>
-  </div>
-</section>
-
-<section class="sage contact" id="contact" data-screen-label="Contact">
-  <canvas data-neural="" data-node="rgba(226,29,94,.6)" data-line="rgba(226,29,94,.2)" data-count="18" data-link="230" data-dot="2.4"></canvas>
-  <div class="wrap">
-    <p class="sec-tag reveal" style="justify-content:center"><span class="n">05</span> Get in touch</p>
-    
-    <h2 class="reveal d2" style="font-family: Fraunces; font-size: 79px">Let's  <span style="color: rgb(226, 29, 94); font-style: italic;">fire <span style="color: #E21D5E; font-style: normal; letter-spacing: -0.79px">&amp;</span> wire </span><span style="letter-spacing: -0.01em;">together!</span></h2><p class="intro reveal d3">I’m looking for a PhD-track position in cognitive neuroscience, and I’m always glad to talk research, swap ideas, or share work.</p>
-    <div class="clinks reveal d3">
-      <a href="mailto:psk.aysesahin@gmail.com">↗ &nbsp;psk.aysesahin@gmail.com</a>
-      <a href="https://linkedin.com/in/aysesahin24" target="_blank" rel="noopener">↗ &nbsp;LinkedIn</a>
-      <a href="https://independent.academia.edu/AyseSahin240" target="_blank" rel="noopener">↗ &nbsp;Academia</a>
-    </div>
-  </div>
-</section>
-
-<footer>© 2026 Ayşe Şahin · Berlin</footer>
-
-<button class="totop" id="totop" type="button" aria-label="Back to the top" title="Back to the top">↑</button>
+<dc-import name="footer" hint-size="100%,480px"></dc-import>
 </x-dc>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:&quot;100%&quot;,&quot;height&quot;:&quot;100%&quot;},&quot;accent&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:[&quot;#e21d5e&quot;,&quot;#b3164a&quot;],&quot;options&quot;:[[&quot;#ec3b78&quot;,&quot;#c92259&quot;],[&quot;#f0407c&quot;,&quot;#cc2058&quot;],[&quot;#e21d5e&quot;,&quot;#b3164a&quot;],[&quot;#e2620f&quot;,&quot;#b84a08&quot;]],&quot;section&quot;:&quot;Color&quot;,&quot;tsType&quot;:&quot;string[]&quot;},&quot;detail&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:[&quot;#e2620f&quot;,&quot;#b84a08&quot;],&quot;options&quot;:[[&quot;#e21d5e&quot;,&quot;#b3164a&quot;],[&quot;#f0356f&quot;,&quot;#c41f54&quot;],[&quot;#ec3b78&quot;,&quot;#c92259&quot;],[&quot;#e2620f&quot;,&quot;#b84a08&quot;]],&quot;section&quot;:&quot;Color&quot;,&quot;tsType&quot;:&quot;string[]&quot;},&quot;sage&quot;:{&quot;editor&quot;:&quot;color&quot;,&quot;default&quot;:&quot;#f3d6ad&quot;,&quot;options&quot;:[&quot;#f6c893&quot;,&quot;#f8d0a0&quot;,&quot;#f4c088&quot;,&quot;#f0bb80&quot;,&quot;#f3d6ad&quot;],&quot;section&quot;:&quot;Color&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;animate&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;section&quot;:&quot;Motion&quot;,&quot;tsType&quot;:&quot;boolean&quot;}}">
+<script type="text/x-dc" data-dc-script>
 class Component extends DCLogic {
   componentDidMount() {
-    this.applyTweaks();
-    this.setupReveal();
-    this.setupNav();
-    this.setupToTop();
-    this.setupPhotoCluster();
-    if (window.NeuralField) window.NeuralField.init();
+    const go = () => window.NeuralField && window.NeuralField.init();
+    go(); setTimeout(go, 400);
+    this.setupPhotos();
   }
-
-  componentDidUpdate() {
-    this.applyTweaks();
+  setupPhotos() {
+    const stage = document.querySelector('[data-pf-stage]');
+    if (!stage) return;
+    const frames = [0, 1, 2].map(i => stage.querySelector('[data-pf="' + i + '"]'));
+    if (frames.some(f => !f)) return;
+    const sizes = ['68%', '45.4%', '30%'];
+    let order = [0, 1, 2];
+    const apply = () => frames.forEach((f, i) => { const r = order.indexOf(i); f.style.width = sizes[r]; f.style.zIndex = String(3 - r); });
+    frames.forEach((f, i) => f.addEventListener('mouseenter', () => { order = [i, ...order.filter(x => x !== i)]; apply(); }));
+    stage.addEventListener('mouseleave', () => { order = [0, 1, 2]; apply(); });
   }
-
-  componentWillUnmount() {
-    if (this._onScroll) removeEventListener('scroll', this._onScroll);
-    if (this._onTop) removeEventListener('scroll', this._onTop);
-  }
-
-  applyTweaks() {
-    const r = document.documentElement.style;
-    const accent = this.props.accent ?? ['#ec3b78', '#c92259'];
-    const detail = this.props.detail ?? ['#e21d5e', '#b3164a'];
-    r.setProperty('--green', accent[0]);
-    r.setProperty('--green-deep', accent[1]);
-    r.setProperty('--clay', detail[0]);
-    r.setProperty('--clay-deep', detail[1]);
-    r.setProperty('--sage', this.props.sage ?? '#f6c893');
-    const animate = this.props.animate ?? true;
-    document.body.classList.toggle('js-anim', !!animate);
-  }
-
-  setupReveal() {
-    const reveals = [...document.querySelectorAll('.reveal')];
-    const rio = new IntersectionObserver(
-      es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); }),
-      { threshold: .12 }
-    );
-    reveals.forEach(r => rio.observe(r));
-    requestAnimationFrame(() => reveals.forEach(r => {
-      const b = r.getBoundingClientRect();
-      if (b.top < innerHeight && b.bottom > 0) r.classList.add('in');
-    }));
-  }
-
-  setupPhotoCluster() {
-    const frames = [...document.querySelectorAll('.hero-photo .pf')];
-    if (frames.length < 2) return;
-    let order = frames.map((_, i) => i); // front = largest
-    const def = frames.map((_, i) => i);
-    const apply = () => frames.forEach((f, i) => f.setAttribute('data-rank', String(order.indexOf(i))));
-    frames.forEach((f, i) => {
-      f.addEventListener('mouseenter', () => {
-        if (order[0] === i) return;
-        order = [i, ...order.filter(x => x !== i)];
-        apply();
-      });
-    });
-    const stage = document.querySelector('.hero-photo');
-    if (stage) stage.addEventListener('mouseleave', () => { order = [...def]; apply(); });
-    apply();
-  }
-
-  setupToTop() {
-    const btn = document.getElementById('totop');
-    if (!btn) return;
-    btn.onclick = () => scrollTo({ top: 0, behavior: 'smooth' });
-    this._onTop = () => btn.classList.toggle('show', scrollY > innerHeight * 0.6);
-    addEventListener('scroll', this._onTop, { passive: true });
-    this._onTop();
-  }
-
-  setupNav() {
-    const topnav = document.getElementById('topnav');
-    if (!topnav) return;
-    const links = [...topnav.querySelectorAll('a')];
-    const secs = links.map(l => document.getElementById(l.dataset.to));
-    const burger = document.getElementById('hamburger');
-    if (burger) {
-      burger.onclick = () => {
-        const open = topnav.classList.toggle('open');
-        burger.setAttribute('aria-expanded', String(open));
-      };
-      links.forEach(l => l.addEventListener('click', () => {
-        topnav.classList.remove('open');
-        burger.setAttribute('aria-expanded', 'false');
-      }));
-    }
-    this._onScroll = () => {
-      topnav.classList.toggle('solid', scrollY > 40);
-      const mid = scrollY + innerHeight * 0.4;
-      let idx = 0;
-      secs.forEach((s, i) => { if (s && s.offsetTop <= mid) idx = i; });
-      links.forEach((l, i) => l.classList.toggle('on', i === idx));
-    };
-    addEventListener('scroll', this._onScroll, { passive: true });
-    this._onScroll();
-  }
+  renderVals() { return {}; }
 }
 </script>
 </body>

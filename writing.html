@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>[TODO: post title] · Ayşe Şahin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('as-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{--serif:'Fraunces',serif;--bg:#fcedd6;--bg-2:#fff8ed;--band:#f9dfbb;--ink:#34221a;--ink-2:#5a4230;--ink-3:#73563a;--accent:#e21d5e;--accent-2:#b3164a;--line:rgba(52,34,26,.16);--todo:#fff3c4;--todo-ink:#7a4d00;color-scheme:light}
+:root[data-theme=dark]{--bg:#1b1310;--bg-2:#261b16;--band:#2c1f19;--ink:#f6e7d2;--ink-2:#dcc6aa;--ink-3:#b59c80;--accent:#ff5c8f;--accent-2:#ff86ac;--line:rgba(246,231,210,.16);--todo:#3b2d10;--todo-ink:#f3c76a;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1b1310;--bg-2:#261b16;--band:#2c1f19;--ink:#f6e7d2;--ink-2:#dcc6aa;--ink-3:#b59c80;--accent:#ff5c8f;--accent-2:#ff86ac;--line:rgba(246,231,210,.16);--todo:#3b2d10;--todo-ink:#f3c76a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:var(--accent-2)}a:hover{color:var(--accent)}
+::selection{background:var(--accent);color:#fff}
+</style>
+</helmet>
+
+<dc-import name="nav" current="none" hint-size="100%,64px" style="position:fixed;top:0;left:0;right:0;z-index:40;display:block"></dc-import>
+<div aria-hidden="true" style="height:64px"></div>
+
+<div style="background:var(--todo);color:var(--todo-ink);border-bottom:1px dashed var(--todo-ink);font-size:15px;text-align:center;padding:8px 20px">Post template · not linked in the navigation until the first post exists</div>
+
+<main>
+<article data-screen-label="Writing · Post" style="max-width:720px;margin:0 auto;padding:clamp(40px,7vw,80px) clamp(20px,5vw,40px) clamp(56px,8vw,96px)">
+  <a href="writing.html" style="font-size:16px;font-weight:600;text-decoration:none;color:var(--accent-2)">← Notes</a>
+  <div style="display:flex;flex-wrap:wrap;gap:8px 14px;align-items:center;margin:24px 0 14px;font-size:15px;color:var(--ink-3)">
+    <span style="font:700 12px/1 'Source Sans 3',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--accent-2);border:1px solid var(--accent-2);border-radius:999px;padding:5px 10px">Paper summary</span>
+    <span>[TODO: date]</span>
+    <span>·</span>
+    <span>[TODO: n] min read</span>
+  </div>
+  <h1 style="font-family:var(--serif);font-weight:400;font-size:clamp(34px,5.4vw,54px);line-height:1.08;letter-spacing:-.015em;margin:0 0 20px;text-wrap:balance">[TODO: post title]</h1>
+  <p style="font-family:var(--serif);font-weight:300;font-size:clamp(20px,2.3vw,24px);line-height:1.5;color:var(--ink-2);margin:0 0 36px;padding:0 0 32px;border-bottom:1px solid var(--line);text-wrap:pretty">[TODO: one- or two-sentence summary: the question, and why it's interesting]</p>
+
+  <p style="margin:0 0 20px;text-wrap:pretty">[TODO: body paragraph. Body text is set at 18px with a 680px measure for comfortable reading.]</p>
+  <h2 style="font-family:var(--serif);font-weight:400;font-size:clamp(24px,3vw,30px);line-height:1.2;margin:40px 0 14px">[TODO: section heading]</h2>
+  <p style="margin:0 0 20px;text-wrap:pretty">[TODO: body paragraph]</p>
+  <blockquote style="margin:28px 0;padding:4px 0 4px 22px;border-left:3px solid var(--accent);font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.45;color:var(--ink)">[TODO: key quote or takeaway]</blockquote>
+  <figure style="margin:32px 0">
+    <div style="aspect-ratio:16/9;border-radius:10px;border:1px solid var(--line);background:var(--bg-2);display:flex;align-items:center;justify-content:center;color:var(--ink-3);font-size:15px">[TODO: figure, plot or notebook screenshot]</div>
+    <figcaption style="margin-top:10px;font-size:15px;color:var(--ink-3)">[TODO: caption]</figcaption>
+  </figure>
+  <pre style="margin:28px 0;padding:18px 20px;border-radius:10px;background:var(--bg-2);border:1px solid var(--line);overflow-x:auto;font-size:15px;line-height:1.55;color:var(--ink)"><code>[TODO: code snippet, e.g. an analysis step]</code></pre>
+
+  <div style="margin-top:48px;padding-top:24px;border-top:1px solid var(--line)">
+    <h2 style="font:700 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin:0 0 12px">References</h2>
+    <ol style="margin:0;padding-left:20px;font-size:16px;color:var(--ink-2)">
+      <li>[TODO: reference]</li>
+    </ol>
+  </div>
+</article>
+</main>
+
+<dc-import name="footer" hint-size="100%,480px"></dc-import>
+</x-dc>
+</body>
+</html>

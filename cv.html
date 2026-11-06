@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>CV · Ayşe Şahin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&amp;family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<script>try{var t=localStorage.getItem('as-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+<style>
+:root{--serif:'Fraunces',serif;--bg:#fcedd6;--bg-2:#fff8ed;--band:#f9dfbb;--ink:#34221a;--ink-2:#5a4230;--ink-3:#73563a;--accent:#e21d5e;--accent-2:#b3164a;--line:rgba(52,34,26,.16);--todo:#fff3c4;--todo-ink:#7a4d00;color-scheme:light}
+:root[data-theme=dark]{--bg:#1b1310;--bg-2:#261b16;--band:#2c1f19;--ink:#f6e7d2;--ink-2:#dcc6aa;--ink-3:#b59c80;--accent:#ff5c8f;--accent-2:#ff86ac;--line:rgba(246,231,210,.16);--todo:#3b2d10;--todo-ink:#f3c76a;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#1b1310;--bg-2:#261b16;--band:#2c1f19;--ink:#f6e7d2;--ink-2:#dcc6aa;--ink-3:#b59c80;--accent:#ff5c8f;--accent-2:#ff86ac;--line:rgba(246,231,210,.16);--todo:#3b2d10;--todo-ink:#f3c76a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Source Sans 3',system-ui,sans-serif;font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:clip}
+a{color:var(--accent-2)}a:hover{color:var(--accent)}
+::selection{background:var(--accent);color:#fff}
+</style>
+</helmet>
+
+<dc-import name="nav" current="cv" hint-size="100%,64px" style="position:fixed;top:0;left:0;right:0;z-index:40;display:block"></dc-import>
+<div aria-hidden="true" style="height:64px"></div>
+
+<main>
+<section data-screen-label="CV" style="padding:clamp(48px,8vw,96px) 0 clamp(56px,8vw,96px)">
+  <div style="max-width:1080px;margin:0 auto;padding:0 clamp(20px,5vw,40px)">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:20px;margin:0 0 clamp(36px,5vw,56px)">
+      <div>
+        <p style="font:600 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:var(--accent-2);margin:0 0 16px">CV</p>
+        <h1 style="font-family:var(--serif);font-weight:400;font-size:clamp(32px,4.6vw,48px);line-height:1.05;letter-spacing:-.02em;margin:0">Education <em style="color:var(--accent-2);font-style:normal">&amp; skills</em></h1>
+      </div>
+      <a href="https://drive.google.com/file/d/1QRYgd66yhxP2wn8kTiGYp2Fy2rFAYURb/view?usp=sharing" target="_blank" rel="noopener" style="font-size:15px;font-weight:600;text-decoration:none;color:var(--bg-2);background:var(--accent-2);padding:8px 16px;border-radius:7px" style-hover="background:var(--accent);color:var(--bg-2)">Download full CV ↓</a>
+    </div>
+
+    <div style="display:flex;flex-direction:column;gap:clamp(40px,5vw,56px);max-width:820px">
+      <div style="display:contents">
+        <div>
+          <h2 style="font:700 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin:0 0 6px;padding:0 0 12px;border-bottom:1px solid var(--line)">Education</h2>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">MSc Cognitive Science</p><p style="margin:0;font-size:16px;color:var(--ink-2)">University of Potsdam</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">2025 – now</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">BSc Psychology, High Honors</p><p style="margin:0;font-size:16px;color:var(--ink-2)">Ege University · GPA 3.89/4.00 (1.1 German scale, uni-assist)</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">2019 – 24</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">Erasmus Exchange</p><p style="margin:0;font-size:16px;color:var(--ink-2)">Fontys University of Applied Sciences, NL · 9.0/10 (Dutch scale)</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">2023</span></div>
+        </div>
+        <div>
+          <h2 style="font:700 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin:0 0 6px;padding:0 0 12px;border-bottom:1px solid var(--line)">Scholarships &amp; awards</h2>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">Erasmus+ Traineeship Scholarship</p><p style="margin:0;font-size:16px;color:var(--ink-2)">European Union</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">2024</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">High Honors Award, BSc Psychology</p><p style="margin:0;font-size:16px;color:var(--ink-2)">Ege University</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">2024</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">TÜBİTAK 1002-A Project Scholarship</p><p style="margin:0;font-size:16px;color:var(--ink-2)">Scientific and Technological Research Council of Türkiye</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">2023 – 24</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">Erasmus+ Study Scholarship</p><p style="margin:0;font-size:16px;color:var(--ink-2)">European Union</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">2023</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">STAR Scholarship</p><p style="margin:0;font-size:16px;color:var(--ink-2)">Scientific and Technological Research Council of Türkiye (TÜBİTAK)</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">2022 – 23</span></div>
+        </div>
+      </div>
+
+      <div style="display:contents">
+        <div>
+          <h2 style="font:700 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin:0 0 6px;padding:0 0 12px;border-bottom:1px solid var(--line)">Summer schools, workshops &amp; meetings</h2>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">Berlin Neuroscience Meeting 2026</p><p style="margin:0;font-size:16px;color:var(--ink-2)">NeuroCure &amp; Einstein Center for Neurosciences, Berlin · Attendee</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">Oct 2026</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">International Computational Cognitive Science Summer School (IICCSSS)</p><p style="margin:0;font-size:16px;color:var(--ink-2)">International Max Planck Research School for the MMFD, Tübingen</p><p style="margin:6px 0 0;font-size:16px;color:var(--ink-2);text-wrap:pretty">Invited talks on computational mechanisms in large language models, language in humans and machines, representation learning in neural networks and the brain, and EEG preprocessing and analysis.<br></p><p style="margin:6px 0 0;font-size:16px;color:var(--ink-2);text-wrap:pretty">In the hackathon “Is That Thing Minded?”, my team of four designed a First Contact Protocol to test whether an unknown system is minded, and built edge cases to expose its flaws.</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">Aug 2026</span></div>
+          <div style="display:flex;justify-content:space-between;gap:16px;padding:14px 0;border-bottom:1px solid var(--line)"><div style="min-width:0"><p style="margin:0;font-weight:600">Mobile Brain–Computer Interface (BCI) Bootcamp</p><p style="margin:0;font-size:16px;color:var(--ink-2)">ANT Neuro &amp; University of Potsdam, Potsdam</p><p style="margin:6px 0 0;font-size:16px;color:var(--ink-2);text-wrap:pretty">A two-day intensive on EEG-based BCI, covering interaction design, EEG signal processing, machine learning and mobile EEG paradigms, with a hands-on session using ANT Neuro hardware in a mobile BCI setup.</p></div><span style="font-size:15px;color:var(--ink-3);white-space:nowrap">May 2026</span></div>
+        </div>
+        <div>
+          <h2 style="font:700 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin:0 0 6px;padding:0 0 12px;border-bottom:1px solid var(--line)">Skills</h2>
+          <div style="padding:14px 0;border-bottom:1px solid var(--line)"><p style="margin:0 0 4px;font-weight:600">Programming</p><p style="margin:0;font-size:16px;color:var(--ink-2)">Python (NumPy, pandas), R, Git, LaTeX</p></div>
+          <div style="padding:14px 0;border-bottom:1px solid var(--line)"><p style="margin:0 0 4px;font-weight:600">Research software</p><p style="margin:0;font-size:16px;color:var(--ink-2)">PsychoPy, OpenSesame, SoSci Survey, SPSS, ATLAS.ti</p></div>
+          <div style="padding:14px 0;border-bottom:1px solid var(--line)"><p style="margin:0 0 4px;font-weight:600">Research methods</p><p style="margin:0;font-size:16px;color:var(--ink-2)">Experimental design, behavioral data collection, quantitative &amp; qualitative analysis, EEG signal processing</p></div>
+        </div>
+        <div>
+          <h2 style="font:700 13px/1.2 'Source Sans 3',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--accent-2);margin:0 0 6px;padding:0 0 12px;border-bottom:1px solid var(--line)">Languages</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:6px 24px;padding:14px 0;border-bottom:1px solid var(--line);font-size:17px"><span><b style="font-weight:600">Turkish</b> native</span><span><b style="font-weight:600">English</b> C1, IELTS 7.5</span><span><b style="font-weight:600">German</b> beginner</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<dc-import name="footer" hint-size="100%,480px"></dc-import>
+</x-dc>
+</body>
+</html>
